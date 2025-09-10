@@ -11,8 +11,8 @@ body {
     font-size: 16px;
     color: #222;
     margin: 20px auto;
-    max-width: 800px;
-    padding: 0 12px;
+    max-width: 900px;
+    padding: 0 14px;
     background-color: #fff;
 }
 
@@ -44,7 +44,7 @@ body {
     display: none;
 }
 
-/* ====== DICTIONARY POPUPS ====== */
+/* ====== DICTIONARY POPUPS (hover) ====== */
 .dicWin {
     cursor: help;
     text-decoration: underline dotted;
@@ -53,7 +53,7 @@ body {
 .dicWin:hover::after {
     content: attr(data-def);
     position: absolute;
-    top: 1.5em;
+    top: 1.6em;
     left: 0;
     white-space: normal;
     background-color: #ffffe0;
@@ -65,8 +65,19 @@ body {
     border-radius: 5px;
     z-index: 9999;
     width: max-content;
-    max-width: 250px;
+    max-width: 320px;
 }
+
+/* small helpers */
+img { max-width: 100%; height: auto; display: block; }
+.under { text-decoration: underline; }
+
+/* ====== COLOR LEGEND (visual only) ====== */
+.article-main__colors { margin-top: 20px; }
+.about-word-color__list { list-style: none; padding-left: 0; margin: 0 0 8px 0; display:flex; gap:18px; flex-wrap:wrap; }
+.word-color-list__item { font-size: 0.95em; color: #333; }
+.word-color-list__item span { vertical-align: middle; }
+.about-word-color__caution { color:#666; font-size:0.95em; margin-top:8px; }
 </style>
 </head>
 <body>
@@ -105,11 +116,9 @@ body {
         <ruby>増<rt>ふ</rt></ruby>えています。
     </p>
 
-    <p><ruby>今<rt>いま</rt></ruby>、
-        <ruby>子<rt>こ</rt></ruby>どもを
-        <ruby>育<rt>そだ</rt></ruby>てているお
-        <ruby>母<rt>かあ</rt></ruby>さんやお
-        <ruby>父<rt>とう</rt></ruby>さんのピクトグラムが
+    <p>
+        <ruby>今<rt>いま</rt></ruby>、
+        <ruby>子<rt>こ</rt></ruby>どもを<ruby>育<rt>そだ</rt></ruby>てているお<ruby>母<rt>かあ</rt></ruby>さんやお<ruby>父<rt>とう</rt></ruby>さんのピクトグラムが
         <span class="dicWin" data-def="みんなに好かれていること">人気</span>です。
     </p>
 
@@ -119,11 +128,77 @@ body {
              style="max-width: 90%; border-radius: 6px;">
     </p>
 
-    <p><ruby>例<rt>たと</rt></ruby>えば、おむつを
-        <span class="dicWin" data-def="新しいものに変えること">替</span>えるために、
-        <ruby>動<rt>うご</rt></ruby>く
-        <ruby>子<rt>こ</rt></ruby>どもをつかまえようとしているピクトグラムがあります。
+    <p>
+        <ruby>例<rt>たと</rt></ruby>えば、おむつを
+        <span class="dicWin" data-def="新しいものに変えること">替</span>
+        <span class="under">える</span>ために、
+        <ruby>動<rt>うご</rt></ruby>く<ruby>子<rt>こ</rt></ruby>どもをつかまえようとしている
+        ピクトグラムがあります。
     </p>
+
+    <p style="text-align: center;">
+        <img src="https://github.com/ZoeSensei/J2Kiji/blob/main/J2Kiji1-2.jpg?raw=true"
+             alt="ピクトグラム_ごはんキャッチ"
+             style="max-width: 90%; border-radius: 6px;">
+    </p>
+
+    <p>
+        ほかのピクトグラムでは、<ruby>子<rt>こ</rt></ruby>どもが
+        <ruby>投<rt>な</rt></ruby>げた<ruby>食<rt>た</rt></ruby>べ<ruby>物<rt>もの</rt></ruby>を、
+        <ruby>手<rt>て</rt></ruby>を
+        <span class="dicWin" data-def="手やものをのばすこと">伸</span>
+        <span class="under">ばし</span>て
+        <ruby>取<rt>と</rt></ruby>ろうとしています。
+    </p>
+
+    <p style="text-align: center;">
+        <img src="https://github.com/ZoeSensei/J2Kiji/blob/main/J2Kiji1-3.jpg?raw=true"
+             alt="ピクトグラム_おかいもの"
+             style="max-width: 90%; border-radius: 6px;">
+    </p>
+
+    <p>
+        <ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>のピクトグラムでは、
+        <ruby>子<rt>こ</rt></ruby>どもを
+        <span class="dicWin" data-def="せなかにのせること">背負</span>
+        <span class="under">っ</span>て、もう
+        <ruby>1人<rt>ひとり</rt></ruby>の<ruby>子<rt>こ</rt></ruby>どもの
+        <ruby>手<rt>て</rt></ruby>を<ruby>引<rt>ひ</rt></ruby>いています。
+        <span class="dicWin" data-def="物を入れるもの；バッグ">袋</span>も
+        <ruby>持<rt>も</rt></ruby>っています。
+    </p>
+
+    <p>
+        このピクトグラムを<ruby>作<rt>つく</rt></ruby>った<ruby>人<rt>ひと</rt></ruby>は
+        1<ruby>歳<rt>さい</rt></ruby>の<ruby>子<rt>こ</rt></ruby>どものお<ruby>母<rt>かあ</rt></ruby>さんです。
+        「<ruby>子<rt>こ</rt></ruby>どもを<ruby>育<rt>そだ</rt></ruby>てる
+        <ruby>大変<rt>たいへん</rt></ruby>な<ruby>仕事<rt>しごと</rt></ruby>を
+        ピクトグラムにして、スポーツのように<ruby>見<rt>み</rt></ruby>ると、
+        <ruby>元気<rt>げんき</rt></ruby>が<ruby>出<rt>で</rt></ruby>ると
+        <ruby>思<rt>おも</rt></ruby>います」と
+        <ruby>話<rt>はな</rt></ruby>しています。
+    </p>
+
+    <!-- Color legend (visual only) -->
+    <div class="article-main__colors">
+        <ul class="about-word-color__list word-color-list">
+            <li class="word-color-list__item is-person">
+                <span style="color: #03893d;"><strong>[みどり]</strong></span>
+                &nbsp;...<ruby>人<rt>ひと</rt></ruby>の<ruby>名前<rt>なまえ</rt></ruby>
+            </li>
+            <li class="word-color-list__item is-place">
+                <span style="color: #cf4a00;"><strong>[オレンジ]</strong></span>
+                &nbsp;…<ruby>国<rt>くに</rt></ruby>や<ruby>県<rt>けん</rt></ruby>、<ruby>町<rt>まち</rt></ruby>、<ruby>場所<rt>ばしょ</rt></ruby>などの<ruby>名前<rt>なまえ</rt></ruby>
+            </li>
+            <li class="word-color-list__item is-group">
+                <span style="color: #0e68b3;"><strong>[あお]</strong></span>
+                &nbsp;…<ruby>会社<rt>かいしゃ</rt></ruby>やグループなどの<ruby>名前<rt>なまえ</rt></ruby>
+            </li>
+        </ul>
+    </div>
+
+    <p class="about-word-color__caution">※<span class="dicWin" data-def="下線のあることばをホバーすると意味が表示されます。">下に線があることば</span>は<ruby>辞書<rt>じしょ</rt></ruby>の説明を<ruby>見<rt>み</rt></ruby>ることができます。</p>
+    <p class="about-word-color__caution">※<span class="dicWin" data-def="スマホではタップで意味が表示されます。">下に線があることば</span>を<ruby>押<rt>お</rt></ruby>すと、<ruby>辞書<rt>じしょ</rt></ruby>の説明を<ruby>見<rt>み</rt></ruby>ることができます。</p>
 
 </div>
 
