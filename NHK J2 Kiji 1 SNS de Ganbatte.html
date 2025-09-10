@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>NHK Easy Article Template</title>
+<style>
+/* ======= BUTTONS ======= */
+#nhk-controls {
+    margin: 20px 0;
+    text-align: center; /* center the buttons */
+}
+.nhk-btn {
+    display: inline-block;
+    margin: 0 20px; /* space between buttons */
+    padding: 8px 20px;
+    background-color: #0080ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+    border: none;
+}
+.nhk-btn:hover {
+    background-color: #005bb5;
+}
+
+/* ======= FURIGANA TOGGLE ======= */
+.hide-rt rt {
+    display: none;
+}
+
+/* ======= WORD COLOR TOGGLE ======= */
+.word-color-hidden .is-person,
+.word-color-hidden .is-place,
+.word-color-hidden .is-group {
+    color: inherit !important;
+}
+
+/* ======= DICTIONARY POPUP ======= */
+.dic-popup {
+    display: none;
+    position: absolute;
+    background: #ffffe0;
+    border: 1px solid #ccc;
+    padding: 5px 8px;
+    z-index: 9999;
+    font-size: 0.9em;
+    max-width: 250px;
+}
+.dicWin {
+    cursor: pointer;
+    text-decoration: underline dotted;
+}
+</style>
+</head>
+<body>
+
+<!-- ======= CONTROL BUTTONS ======= -->
+<div id="nhk-controls">
+    <button class="nhk-btn" id="toggle-furigana">漢字の読み方を消す/表示</button>
+    <button class="nhk-btn" id="toggle-color">ことばの色を消す/表示</button>
+</div>
+
+<!-- ======= EMBEDDED DICTIONARY JSON ======= -->
+<script>
+const dictionary = {
+    "人気": "みんなに好かれていること",
+    "開会": "はじめに行うこと",
+    "大会": "たくさんの人があつまるスポーツの行事",
+    "替": "新しいものに変えること",
+    "伸": "手やものをのばすこと",
+    "背負": "せなかにのせること",
+    "袋": "物を入れるもの；バッグ"
+};
+</script>
+
+<!-- ======= ARTICLE HTML ======= -->
+<div id="nhk-article">
+<h2><span style="font-size: 24pt;"><strong style="font-family: inherit;">NEWS WEB EASY やさしい日本語</strong></span></h2>
+<div id="wrapper">
+<div id="content">
+<div id="easy-wrapper" class="easy-wrapper">
+<header class="easy-header"><br />
+<div class="header-about-easy js-accordion-wrapper">
+<div class="header-about-easy__inner">NEWS WEB EASYについて</div>
+<div class="header-about-easy__body about-easy-body js-accordion-body">
+<div class="about-easy-body__inner">
+<p>「ＮＥＷＳ ＷＥＢ ＥＡＳＹ」は<ruby>外国人<rt>がいこくじん</rt></ruby>の<ruby>皆<rt>みな</rt></ruby>さんや、<ruby>小学生<rt>しょうがくせい</rt></ruby>・<ruby>中学生<rt>ちゅうがくせい</rt></ruby>の<ruby>皆<rt>みな</rt></ruby>さんのために、わかりやすいことばでニュースを<ruby>伝<rt>つた</rt></ruby>えます。</p>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+</header>
+<div class="l-container">
+<article class="article-main">
+<figure id="js-article-figure" class="article-main__figure"></figure>
+<h3 class="article-main__title"><strong>SNSで<ruby>人気<rt>にんき</rt></ruby>　がんばって<ruby>子<rt>こ</rt></ruby>どもを<ruby>育<rt>そだ</rt></ruby>てる「ピクトグラム」</strong></h3>
+<p id="js-article-date" class="article-main__date">[08月05日 12時00分]</p>
+<p class="article-main__date">&nbsp;</p>
+<div id="js-article-body" class="article-main__body article-body">
+<p><strong><ruby>東京<rt>とうきょう</rt></ruby>オリンピック</strong>の<a id="id-0001" class="dicWin"></a><ruby><span class="under">開会</span><rt>かいかい</rt></ruby><ruby>式<rt>しき</rt></ruby>では、<a id="id-0002" class="dicWin"></a><ruby><span class="under">大会</span><rt>たいかい</rt></ruby>で<ruby>行<rt>おこな</rt></ruby>うスポーツを「ピクトグラム」という<ruby>絵<rt>え</rt></ruby>でわかりやすく<ruby>紹介<rt>しょうかい</rt></ruby>しました。そのあとで、ピクトグラムを<ruby>作<rt>つく</rt></ruby>ってSNSで<ruby>紹介<rt>しょうかい</rt></ruby>する<ruby>人<rt>ひと</rt></ruby>が<ruby>増<rt>ふ</rt></ruby>えています。</p>
+<p><ruby>今<rt>いま</rt></ruby>、<ruby>子<rt>こ</rt></ruby>どもを<ruby>育<rt>そだ</rt></ruby>てているお<ruby>母<rt>かあ</rt></ruby>さんやお<ruby>父<rt>とう</rt></ruby>さんのピクトグラムが<a id="id-0000" class="dicWin"></a><ruby><span class="under">人気</span><rt>にんき</rt></ruby>です。</p>
+<p style="text-align: center;"><img src="https://github.com/ZoeSensei/J2Kiji/blob/main/J2Kiji1-1.jpg?raw=true" alt="ピクトウラム_おむつがえ" /></p>
+<p><ruby>例<rt>たと</rt></ruby>えば、おむつを<a id="id-0003" class="dicWin"></a><ruby><span class="under">替</span><rt>か</rt></ruby><span class="under">える</span>ために、<ruby>動<rt>うご</rt></ruby>く<ruby>子<rt>こ</rt></ruby>どもをつかまえようとしているピクトグラムがあります。</p>
+<p style="text-align: center;"><img src="https://github.com/ZoeSensei/J2Kiji/blob/main/J2Kiji1-2.jpg?raw=true" alt="ピクトグラム_ごはんキャッチ" /></p>
+<p>&nbsp;ほかのピクトグラムでは、<ruby>子<rt>こ</rt></ruby>どもが<ruby>投<rt>な</rt></ruby>げた<ruby>食<rt>た</rt></ruby>べ<ruby>物<rt>もの</rt></ruby>を、<ruby>手<rt>て</rt></ruby>を<a id="id-0004" class="dicWin"></a><ruby><span class="under">伸</span><rt>の</rt></ruby><span class="under">ばし</span>て<ruby>取<rt>と</rt></ruby>ろうとしています。</p>
+<p style="text-align: center;"><img src="https://github.com/ZoeSensei/J2Kiji/blob/main/J2Kiji1-3.jpg?raw=true" alt="ピクトグラム_おかいもの" /></p>
+<p>&nbsp;<ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>のピクトグラムでは、<ruby>子<rt>こ</rt></ruby>どもを<a id="id-0005" class="dicWin"></a><ruby><span class="under">背負</span><rt>せお</rt></ruby><span class="under">っ</span>て、もう<ruby>1人<rt>ひとり</rt></ruby>の<ruby>子<rt>こ</rt></ruby>どもの<ruby>手<rt>て</rt></ruby>を<ruby>引<rt>ひ</rt></ruby>いています。<ruby>手<rt>て</rt></ruby>には<ruby>大<rt>おお</rt></ruby>きな<a id="id-0006" class="dicWin"></a><ruby><span class="under">袋</span><rt>ふくろ</rt></ruby>も<ruby>持<rt>も</rt></ruby>っています。</p>
+<p>このピクトグラムを<ruby>作<rt>つく</rt></ruby>った<ruby>人<rt>ひと</rt></ruby>は1<ruby>歳<rt>さい</rt></ruby>の<ruby>子<rt>こ</rt></ruby>どものお<ruby>母<rt>かあ</rt></ruby>さんです。「<ruby>子<rt>こ</rt></ruby>どもを<ruby>育<rt>そだ</rt></ruby>てる<ruby>大変<rt>たいへん</rt></ruby>な<ruby>仕事<rt>しごと</rt></ruby>をピクトグラムにして、スポーツのように<ruby>見<rt>み</rt></ruby>ると、<ruby>元気<rt>げんき</rt></ruby>が<ruby>出<rt>で</rt></ruby>ると<ruby>思<rt>おも</rt></ruby>います」と<ruby>話<rt>はな</rt></ruby>しています。</p>
+<p>&nbsp;</p>
+</div>
+
+<!-- Color legend -->
+<div class="article-main__colors">
+<div class="about-word-color">
+<ul class="about-word-color__list word-color-list">
+<li class="word-color-list__item is-person"><span style="color: #03893d;"><strong>[みどり]</strong></span> ...<ruby>人<rt>ひと</rt></ruby>の<ruby>名前<rt>なまえ</rt></ruby></li>
+<li class="word-color-list__item is-place"><span style="color: #cf4a00;"><strong>[オレンジ]</strong></span>&hellip;<ruby>国<rt>くに</rt></ruby>や<ruby>県<rt>けん</rt></ruby>、<ruby>町<rt>まち</rt></ruby>、<ruby>場所<rt>ばしょ</rt></ruby>などの<ruby>名前<rt>なまえ</rt></ruby></li>
+<li class="word-color-list__item is-group"><span style="color: #0e68b3;"><strong>[あお]</strong></span> &hellip;<ruby>会社<rt>かいしゃ</rt></ruby>やグループなどの<ruby>名前<rt>なまえ</rt></ruby></li>
+</ul>
+</div>
+<p class="about-word-color__caution hide-sp">※<span class="dicWin"><ruby>下<rt>した</rt></ruby>に<ruby>線<rt>せん</rt></ruby>があることば</span>は<ruby>辞書<rt>じしょ</rt></ruby>の説明を<ruby>見<rt>み</rt></ruby>ることができます。</p>
+<p class="about-word-color__caution show-sp">※<span class="dicWin"><ruby>下<rt>した</rt></ruby>に<ruby>線<rt>せん</rt></ruby>があることば</span>を<ruby>押<rt>お</rt></ruby>すと、<ruby>辞書<rt>じしょ</rt></ruby>の説明を<ruby>見<rt>み</rt></ruby>ることができます。</p>
+</div>
+</article>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ======= DICTIONARY POPUP ======= -->
+<div id="dic-popup" class="dic-popup"></div>
+
+<script>
+// ======= FURIGANA TOGGLE =======
+document.getElementById('toggle-furigana').addEventListener('click', () => {
+    document.querySelectorAll('#nhk-article rt').forEach(rt => rt.classList.toggle('hide-rt'));
+});
+
+// ======= COLOR TOGGLE =======
+document.getElementById('toggle-color').addEventListener('click', () => {
+    document.getElementById('nhk-article').classList.toggle('word-color-hidden');
+});
+
+// ======= DICTIONARY POPUP =======
+const popup = document.getElementById('dic-popup');
+document.querySelectorAll('#nhk-article .dicWin').forEach(el => {
+    el.addEventListener('click', (e) => {
+        const word = el.textContent || el.innerText;
+        const def = dictionary[word] || "（辞書未登録）";
+        popup.textContent = def;
+        popup.style.display = 'block';
+        popup.style.left = e.pageX + 10 + 'px';
+        popup.style.top = e.pageY + 10 + 'px';
+        e.stopPropagation();
+    });
+});
+document.addEventListener('click', (e) => {
+    if (!e.target.classList.contains('dicWin')) {
+        popup.style.display = 'none';
+    }
+});
+</script>
+
+</body>
+</html>
