@@ -2,16 +2,16 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>NHK Easy Article Template</title>
+<title>NHK Easy Article - SNSで人気がんばって子どもを育てる「ピクトグラム」</title>
 <style>
 /* ======= BUTTONS ======= */
 #nhk-controls {
     margin: 20px 0;
-    text-align: center; /* center the buttons */
+    text-align: center;
 }
 .nhk-btn {
     display: inline-block;
-    margin: 0 20px; /* space between buttons */
+    margin: 0 20px;
     padding: 8px 20px;
     background-color: #0080ff;
     color: white;
@@ -36,7 +36,7 @@
 .word-color-hidden .is-place,
 .word-color-hidden .is-group {
     color: inherit !important;
-    font-weight: normal; /* remove bold when toggled off */
+    font-weight: normal !important;
 }
 
 /* ======= DICTIONARY POPUP ======= */
@@ -54,11 +54,6 @@
     cursor: pointer;
     text-decoration: underline dotted;
 }
-
-/* ======= COLOR LEGEND ======= */
-.is-person { color: #03893d; font-weight: bold; }
-.is-place { color: #cf4a00; font-weight: bold; }
-.is-group { color: #0e68b3; font-weight: bold; }
 </style>
 </head>
 <body>
@@ -107,36 +102,29 @@ const dictionary = {
 <p class="article-main__date">&nbsp;</p>
 <div id="js-article-body" class="article-main__body article-body">
 
-<!-- ======= First paragraph with color toggle ======= -->
-<p><span class="is-group">東京オリンピック</span>の<span class="dicWin">開会</span><ruby>式<rt>しき</rt></ruby>では、<span class="dicWin">大会</span>で<ruby>行<rt>おこな</rt></ruby>うスポーツを「ピクトグラム」という<ruby>絵<rt>え</rt></ruby>でわかりやすく<ruby>紹介<rt>しょうかい</rt></ruby>しました。そのあとで、ピクトグラムを<ruby>作<rt>つく</rt></ruby>ってSNSで<ruby>紹介<rt>しょうかい</rt></ruby>する<ruby>人<rt>ひと</rt></ruby>が<ruby>増<rt>ふ</rt></ruby>えています。</p>
+<!-- First paragraph with color toggle on 東京オリンピック -->
+<p><ruby><span class="is-group">東京</span><rt>とうきょう</rt></ruby>オリンピックの<span class="dicWin">開会</span><ruby>式<rt>しき</rt></ruby>では、<span class="dicWin">大会</span>で<ruby>行<rt>おこな</rt></ruby>うスポーツを「ピクトグラム」という<ruby>絵<rt>え</rt></ruby>でわかりやすく<ruby>紹介<rt>しょうかい</rt></ruby>しました。そのあとで、ピクトグラムを<ruby>作<rt>つく</rt></ruby>ってSNSで<ruby>紹介<rt>しょうかい</rt></ruby>する<ruby>人<rt>ひと</rt></ruby>が<ruby>増<rt>ふ</rt></ruby>えています。</p>
 
 <p><ruby>今<rt>いま</rt></ruby>、<ruby>子<rt>こ</rt></ruby>どもを<ruby>育<rt>そだ</rt></ruby>てているお<ruby>母<rt>かあ</rt></ruby>さんやお<ruby>父<rt>とう</rt></ruby>さんのピクトグラムが<span class="dicWin">人気</span>です。</p>
-
-<p style="text-align: center;"><img src="https://github.com/ZoeSensei/J2Kiji/blob/main/J2Kiji1-1.jpg?raw=true" alt="ピクトウラム_おむつがえ" /></p>
-
-<p><ruby>例<rt>たと</rt></ruby>えば、おむつを<span class="dicWin">替</span><ruby><span class="under">える</span><rt>か</rt></ruby>ために、<ruby>動<rt>うご</rt></ruby>く<ruby>子<rt>こ</rt></ruby>どもをつかまえようとしているピクトグラムがあります。</p>
-
+<p style="text-align: center;"><img src="https://github.com/ZoeSensei/J2Kiji/blob/main/J2Kiji1-1.jpg?raw=true" alt="ピクトグラム_おむつがえ" /></p>
+<p><ruby>例<rt>たと</rt></ruby>えば、おむつを<span class="dicWin">替</span>えるために、<ruby>動<rt>うご</rt></ruby>く<ruby>子<rt>こ</rt></ruby>どもをつかまえようとしているピクトグラムがあります。</p>
 <p style="text-align: center;"><img src="https://github.com/ZoeSensei/J2Kiji/blob/main/J2Kiji1-2.jpg?raw=true" alt="ピクトグラム_ごはんキャッチ" /></p>
-
-<p>&nbsp;ほかのピクトグラムでは、<ruby>子<rt>こ</rt></ruby>どもが<ruby>投<rt>な</rt></ruby>げた<ruby>食<rt>た</rt></ruby>べ<ruby>物<rt>もの</rt></ruby>を、<ruby>手<rt>て</rt></ruby>を<span class="dicWin">伸</span><ruby><span class="under">ばし</span><rt>の</rt></ruby>て<ruby>取<rt>と</rt></ruby>ろうとしています。</p>
-
+<p>ほかのピクトグラムでは、<ruby>子<rt>こ</rt></ruby>どもが<ruby>投<rt>な</rt></ruby>げた<ruby>食<rt>た</rt></ruby>べ<ruby>物<rt>もの</rt></ruby>を、手を<span class="dicWin">伸</span>ばして<ruby>取<rt>と</rt></ruby>ろうとしています。</p>
 <p style="text-align: center;"><img src="https://github.com/ZoeSensei/J2Kiji/blob/main/J2Kiji1-3.jpg?raw=true" alt="ピクトグラム_おかいもの" /></p>
-
-<p>&nbsp;<ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>のピクトグラムでは、<ruby>子<rt>こ</rt></ruby>どもを<span class="dicWin">背負</span>って、もう<ruby>1人<rt>ひとり</rt></ruby>の<ruby>子<rt>こ</rt></ruby>どもの<ruby>手<rt>て</rt></ruby>を<ruby>引<rt>ひ</rt></ruby>いています。<ruby>手<rt>て</rt></ruby>には大きな<span class="dicWin">袋</span><ruby><rt>ふくろ</rt></ruby>も持っています。</p>
-
-<p>このピクトグラムを<ruby>作<rt>つく</rt></ruby>った<ruby>人<rt>ひと</rt></ruby>は1<ruby>歳<rt>さい</rt></ruby>の<ruby>子<rt>こ</rt></ruby>どものお<ruby>母<rt>かあ</rt></ruby>さんです。「<ruby>子<rt>こ</rt></ruby>どもを<ruby>育<rt>そだ</rt></ruby>てる<ruby>大変<rt>たいへん</rt></ruby>な<ruby>仕事<rt>しごと</rt></ruby>をピクトグラムにして、スポーツのように<ruby>見<rt>み</rt></ruby>ると、<ruby>元気<rt>げんき</rt></ruby>が<ruby>出<rt>で</rt></ruby>ると<ruby>思<rt>おも</rt></ruby>います」と<ruby>話<rt>はな</rt></ruby>しています。</p>
+<p>買い物のピクトグラムでは、<ruby>子<rt>こ</rt></ruby>どもを<span class="dicWin">背負</span>って、もう<ruby>1人<rt>ひとり</rt></ruby>の<ruby>子<rt>こ</rt></ruby>どもの<ruby>手<rt>て</rt></ruby>を<ruby>引<rt>ひ</rt></ruby>いています。手には大きな<span class="dicWin">袋</span>も持っています。</p>
+<p>このピクトグラムを<ruby>作<rt>つく</rt></ruby>った<ruby>人<rt>ひと</rt></ruby>は1<ruby>歳<rt>さい</rt></ruby>の<ruby>子<rt>こ</rt></ruby>どものお<ruby>母<rt>かあ</rt></ruby>さんです。「子どもを育てる大変な仕事をピクトグラムにして、スポーツのように<ruby>見<rt>み</rt></ruby>ると、元気が出ると思います」と話しています。</p>
 
 <!-- Color legend -->
 <div class="article-main__colors">
 <div class="about-word-color">
 <ul class="about-word-color__list word-color-list">
-<li class="word-color-list__item is-person"><span style="color: #03893d;"><strong>[みどり]</strong></span> ...<ruby>人<rt>ひと</rt></ruby>の<ruby>名前<rt>なまえ</rt></ruby></li>
-<li class="word-color-list__item is-place"><span style="color: #cf4a00;"><strong>[オレンジ]</strong></span>&hellip;<ruby>国<rt>くに</rt></ruby>や<ruby>県<rt>けん</rt></ruby>、<ruby>町<rt>まち</rt></ruby>、<ruby>場所<rt>ばしょ</rt></ruby>などの<ruby>名前<rt>なまえ</rt></ruby></li>
-<li class="word-color-list__item is-group"><span style="color: #0e68b3;"><strong>[あお]</strong></span> &hellip;<ruby>会社<rt>かいしゃ</rt></ruby>やグループなどの<ruby>名前<rt>なまえ</rt></ruby></li>
+<li class="word-color-list__item is-person"><span style="color: #03893d;"><strong>[みどり]</strong></span> ...<ruby>人<rt>ひと</rt></ruby>の名前</li>
+<li class="word-color-list__item is-place"><span style="color: #cf4a00;"><strong>[オレンジ]</strong></span> …国や県、町、場所などの名前</li>
+<li class="word-color-list__item is-group"><span style="color: #0e68b3;"><strong>[あお]</strong></span> …会社やグループなどの名前</li>
 </ul>
 </div>
-<p class="about-word-color__caution hide-sp">※<span class="dicWin"><ruby>下<rt>した</rt></ruby>に<ruby>線<rt>せん</rt></ruby>があることば</span>は<ruby>辞書<rt>じしょ</rt></ruby>の説明を<ruby>見<rt>み</rt></ruby>ることができます。</p>
-<p class="about-word-color__caution show-sp">※<span class="dicWin"><ruby>下<rt>した</rt></ruby>に<ruby>線<rt>せん</rt></ruby>があることば</span>を押すと、<ruby>辞書<rt>じしょ</rt></ruby>の説明を<ruby>見<rt>み</rt></ruby>ることができます。</p>
+<p class="about-word-color__caution hide-sp">※<span class="dicWin">下に線があることば</span>は辞書の説明を見られます。</p>
+<p class="about-word-color__caution show-sp">※<span class="dicWin">下に線があることば</span>を押すと、辞書の説明を見られます。</p>
 </div>
 </article>
 </div>
@@ -155,7 +143,7 @@ document.getElementById('toggle-furigana').addEventListener('click', () => {
 
 // ======= COLOR TOGGLE =======
 document.getElementById('toggle-color').addEventListener('click', () => {
-    document.querySelectorAll('#nhk-article .is-person, #nhk-article .is-place, #nhk-article .is-group').forEach(el => {
+    document.querySelectorAll('.is-person, .is-place, .is-group').forEach(el => {
         el.classList.toggle('word-color-hidden');
     });
 });
