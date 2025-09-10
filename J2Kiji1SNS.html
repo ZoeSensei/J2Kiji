@@ -178,26 +178,17 @@ img { max-width: 100%; height: auto; display: block; margin: 8px auto; }
     </p>
 
     <!-- Color legend -->
-    <div class="article-main__colors">
-        <ul class="about-word-color__list word-color-list">
-            <li class="word-color-list__item is-person">
-                <span style="color: #03893d;"><strong>[みどり]</strong></span>
-                &nbsp;...<ruby>人<rt>ひと</rt></ruby>の<ruby>名前<rt>なまえ</rt></ruby>
-            </li>
-            <li class="word-color-list__item is-place">
-                <span style="color: #cf4a00;"><strong>[オレンジ]</strong></span>
-                &nbsp;…<ruby>国<rt>くに</rt></ruby>や<ruby>県<rt>けん</rt></ruby>、<ruby>町<rt>まち</rt></ruby>、<ruby>場所<rt>ばしょ</rt></ruby>などの<ruby>名前<rt>なまえ</rt></ruby>
-            </li>
-            <li class="word-color-list__item is-group">
-                <span style="color: #0e68b3;"><strong>[あお]</strong></span>
-                &nbsp;…<ruby>会社<rt>かいしゃ</rt></ruby>やグループなどの<ruby>名前<rt>なまえ</rt></ruby>
-            </li>
-        </ul>
-    </div>
-
-    <p class="about-word-color__caution">※<span class="dicWin" data-def="下線のあることばをホバーすると意味が表示されます。">下に線があることば</span>は<ruby>辞書<rt>じしょ</rt></ruby>の説明を<ruby>見<rt>み</rt></ruby>ることができます。</p>
-    <p class="about-word-color__caution">※<span class="dicWin" data-def="スマホではタップで意味が表示されます。">下に線があることば</span>を<ruby>押<rt>お</rt></ruby>すと、<ruby>辞書<rt>じしょ</rt></ruby>の説明を<ruby>見<rt>み</rt></ruby>ることができます。</p>
-
+<!-- Color legend -->
+<div class="article-main__colors">
+<ul class="about-word-color__list word-color-list">
+<li class="word-color-list__item is-person"><span style="color: #03893d;"><strong>[みどり]</strong></span> ...<ruby>人<rt>ひと</rt></ruby>の<ruby>名前<rt>なまえ</rt></ruby></li>
+<li class="word-color-list__item is-place"><span style="color: #cf4a00;"><strong>[オレンジ]</strong></span>&hellip;<ruby>国<rt>くに</rt></ruby>や<ruby>県<rt>けん</rt></ruby>、<ruby>町<rt>まち</rt></ruby>、<ruby>場所<rt>ばしょ</rt></ruby>などの<ruby>名前<rt>なまえ</rt></ruby></li>
+<li class="word-color-list__item is-group"><span style="color: #0e68b3;"><strong>[あお]</strong></span> &hellip;<ruby>会社<rt>かいしゃ</rt></ruby>やグループなどの<ruby>名前<rt>なまえ</rt></ruby></li>
+</ul>
+</div>
+<p class="about-word-color__caution hide-sp">※<span class="dicWin">下に線があることば</span>は<ruby>辞書<rt>じしょ</rt></ruby>の説明を<ruby>見<rt>み</rt></ruby>ることができます。</p>
+<p class="about-word-color__caution show-sp">※<span class="dicWin">下に線があることば</span>を<ruby>押<rt>お</rt></ruby>すと、<ruby>辞書<rt>じしょ</rt></ruby>の説明を<ruby>見<rt>み</rt></ruby>ることができます。</p>
+    
 </div>
 
 <!-- ====== SCRIPT ====== -->
@@ -210,3 +201,4 @@ document.getElementById('toggle-furigana').addEventListener('click', () => {
 
 </body>
 </html>
+
