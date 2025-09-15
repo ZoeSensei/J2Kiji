@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>NHK Easy Article</title>
+<style>
+/* ====== BASIC LAYOUT ====== */
+body {
+    font-family: "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
+    line-height: 1.8;
+    font-size: 16px;
+    color: #222;
+    margin: 20px auto;
+    max-width: 900px;
+    padding: 0 14px;
+    background-color: #fff;
+}
+
+/* ====== CONTROL BUTTONS ====== */
+#nhk-controls {
+    margin: 15px 0 25px 0;
+    text-align: center;
+}
+.nhk-btn {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 24px;
+    background-color: #9f75d1; /* lavender */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.425em; /* ~24px */
+    border: none;
+    transition: background-color 0.2s ease;
+}
+.nhk-btn:hover {
+    background-color: #805ab0; /* slightly darker lavender on hover */
+}
+
+/* ====== FURIGANA TOGGLE ====== */
+#nhk-article.hide-furigana rt {
+    display: none;
+}
+
+/* ====== DICTIONARY POPUPS (hover) ====== */
+.dicWin {
+    cursor: help;
+    text-decoration: underline dotted;
+    position: relative;
+}
+.dicWin:hover::after {
+    content: attr(data-def);
+    position: absolute;
+    top: 1.6em;
+    left: 0;
+    white-space: normal;
+    background-color: #ffffe0;
+    border: 1px solid #ccc;
+    padding: 6px 8px;
+    font-size: 0.9em;
+    color: #000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    z-index: 9999;
+    width: max-content;
+    max-width: 320px;
+}
+
+/* small helpers */
+img { max-width: 100%; height: auto; display: block; margin: 8px auto; }
+.under { text-decoration: underline; }
+
+/* ====== COLOR LEGEND ====== */
+.article-main__colors {
+    margin-top: 20px;
+}
+.about-word-color__list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 0 8px 0;
+}
+.word-color-list__item {
+    font-size: 0.95em;
+    color: #333;
+    margin-bottom: 6px;
+}
+.word-color-list__item span {
+    vertical-align: middle;
+}
+.about-word-color__caution {
+    color:#666;
+    font-size:0.95em;
+    margin-top:8px;
+}
+
+.color-legend-box {
+    background-color: #F5F5DC; /* light beige */
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 6px;
+}
+    
+/* ====== PAGE BANNER ====== */
+#page-banner {
+    background-color: #0078d7; /* blue */
+    color: #fff;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 15px 0;
+    margin: 0 0 20px 0;
+    border-radius: 4px;
+}
+</style>
+</head>
+<body>
+
+<!-- ====== PAGE BANNER ====== -->
+<div id="page-banner">
+    NEWS WEB EASY やさしい日本語
+</div>
+
+<!-- ====== CONTROL BUTTON ====== -->
+<div id="nhk-controls">
+    <button class="nhk-btn" id="toggle-furigana">
+        <ruby>漢字<rt>かんじ</rt></ruby>の<ruby>読み方<rt>よみかた</rt></ruby>を<ruby>消<rt>け</rt></ruby>す
+    </button>
+</div>
+
+<!-- ====== ARTICLE CONTENT ====== -->
+<div id="nhk-article">
+
+<h3 style="font-size: 20px; margin-bottom: 6px;">
+    ２０<ruby>年<rt>ねん</rt></ruby><ruby>前<rt>まえ</rt></ruby>に<ruby>盗<rt>ぬす</rt></ruby>まれた４<ruby>億<rt>おく</rt></ruby><ruby>円<rt>えん</rt></ruby>のピカソの<ruby>絵<rt>え</rt></ruby>が<ruby>見<rt>み</rt></ruby>つかる
+            </h3>
+
+<p style="text-align: center;">
+    <img src="https://github.com/ZoeSensei/J2Kiji/blob/main/J2Kiji2-1.jpg?raw=true" alt="ピカソのドラ・マールさんの絵を見つけたアーサー・ブランド氏とその絵">
+</p>
+
+<p style="color: #555; margin-bottom: 20px;">[03月27日 17時15分]</p>
+
+<p>
+    <strong style="color: #03893d">パブロ・ピカソ</strong>は
+    <strong style="color: #cf4a00">スペイン</strong>の
+    <ruby>有名<rt>ゆうめい</rt></ruby>な
+    <span class="dicWin" data-def="えをかく人。アーティスト。"><ruby>画家<rt>がか</rt></ruby></span>です。２０
+    <ruby>年<rt>ねん</rt></ruby>
+    <ruby>前<rt>まえ</rt></ruby>に
+    <strong style="color: #cf4a00">フランス</strong>で
+    <ruby>盗<rt>ぬす</rt></ruby>まれた
+    <strong style="color: #03893d">ピカソ</strong>の
+    <ruby>絵<rt>え</rt></ruby>が、
+    <ruby>今月<rt>こんげつ</rt></ruby>
+    <strong style="color: #cf4a00">オランダ</strong>で
+    <ruby>見<rt>み</rt></ruby>つかりました。
+</p>
+
+<p>
+    この<ruby>絵<rt>え</rt></ruby>は、
+    <strong style="color: #03893d">ピカソ</strong>が１９３８
+    <ruby>年<rt>ねん</rt></ruby>にかいた<ruby>女性<rt>じょせい</rt></ruby>の<ruby>絵<rt>え</rt></ruby>です。
+    <ruby>外国<rt>がいこく</rt></ruby>の<ruby>新聞<rt>しんぶん</rt></ruby>によると、サウジアラビア<ruby>人<rt>じん</rt></ruby>のお<ruby>金持<rt>かねも</rt></ruby>ちが４<ruby>億<rt>おく</rt></ruby><ruby>円<rt>えん</rt></ruby>で<ruby>絵<rt>え</rt></ruby>を<ruby>買<rt>か</rt></ruby>いましたが、１９９９<ruby>年<rt>ねん</rt></ruby>に
+    <strong style="color: #cf4a00">フランス</strong>の<ruby>港<rt>みなと</rt></ruby>で<ruby>船<rt>ふね</rt></ruby>の<ruby>中<rt>なか</rt></ruby>から<ruby>盗<rt>ぬす</rt></ruby>まれました。
+    それからずっと、<ruby>絵<rt>え</rt></ruby>がどこにあるかわかりませんでした。
+</p>
+
+<p>
+    オランダ<ruby>人<rt>じん</rt></ruby>の
+    <span class="dicWin" data-def="人がきれいだと思っているもの。えやアートなど。"><ruby>美術品<rt>びじゅつひん</rt></ruby></span>の
+    <ruby>専門家<rt>せんもんか</rt></ruby>は、
+    <span class="dicWin" data-def="国の中心になっている都市。日本のは東京である。キャピトル。"><ruby><span class="under">首都</span><rt>しゅと</rt></ruby></span>の
+    <strong style="color: #cf4a00">アムステルダム</strong>にこの
+    <ruby>絵<rt>え</rt></ruby>を<ruby>持<rt>も</rt></ruby>っている<ruby>人<rt>ひと</rt></ruby>がいるようだと
+    <ruby>知<rt>し</rt></ruby>って、その<ruby>人<rt>ひと</rt></ruby>と
+    <ruby>何<rt>なん</rt></ruby><ruby>度<rt>ど</rt></ruby>も<ruby>話<rt>はなし</rt></ruby>をしました。
+    そして、<ruby>絵<rt>え</rt></ruby>を<ruby>渡<rt>わた</rt></ruby>してもらいました。
+    <strong style="color: #cf4a00">アメリカ</strong>の<ruby>専門家<rt>せんもんか</rt></ruby>が<ruby>調<rt>しら</rt></ruby>べると、
+    <ruby>本当<rt>ほんとう</rt></ruby>の
+    <strong style="color: #03893d">ピカソ</strong>の
+    <ruby>絵<rt>え</rt></ruby>だとわかりました。
+</p>
+
+<!-- Audio player -->
+<p style="text-align: center; margin: 20px 0;">
+    <audio controls>
+        <source src="https://zoesensei.github.io/J2Kiji/J2Kiji2Listen.mp3" type="audio/mpeg">
+    </audio>
+</p>
+    
+<!-- Color legend -->
+<div class="color-legend-box">
+    <ul class="about-word-color__list word-color-list">
+        <li class="word-color-list__item is-person">
+            <span style="color: #03893d;"><strong>[みどり]</strong></span>
+            ...<ruby>人<rt>ひと</rt></ruby>の<ruby>名前<rt>なまえ</rt></ruby>
+        </li>
+        <li class="word-color-list__item is-place">
+            <span style="color: #cf4a00;"><strong>[オレンジ]</strong></span>
+            …<ruby>国<rt>くに</rt></ruby>や<ruby>県<rt>けん</rt></ruby>、<ruby>町<rt>まち</rt></ruby>、<ruby>場所<rt>ばしょ</rt></ruby>などの<ruby>名前<rt>なまえ</rt></ruby>
+        </li>
+        <li class="word-color-list__item is-group">
+            <span style="color: #0e68b3;"><strong>[あお]</strong></span>
+            …<ruby>会社<rt>かいしゃ</rt></ruby>やグループなどの<ruby>名前<rt>なまえ</rt></ruby>
+        </li>
+    </ul>
+</div>
+ 
+<p class="about-word-color__caution">※<span class="dicWin" data-def="下線のあることばをホバーすると意味が表示されます。">下に線があることば</span>は<ruby>辞書<rt>じしょ</rt></ruby>の説明を<ruby>見<rt>み</rt></ruby>ることができます。<ruby>押<rt>お</rt></ruby>すと、<ruby>辞書<rt>じしょ</rt></ruby>の説明を<ruby>見<rt>み</rt></ruby>ることができます。</p>
+
+</div>
+
+<!-- ====== SCRIPT ====== -->
+<script>
+const btn = document.getElementById('toggle-furigana');
+btn.addEventListener('click', () => {
+    const article = document.getElementById('nhk-article');
+    article.classList.toggle('hide-furigana');
+
+    if(article.classList.contains('hide-furigana')){
+        btn.innerHTML = '<ruby>漢字<rt>かんじ</rt></ruby>の<ruby>読み方<rt>よみかた</rt></ruby>を<ruby>付<rt>つ</rt></ruby>ける';
+    } else {
+        btn.innerHTML = '<ruby>漢字<rt>かんじ</rt></ruby>の<ruby>読み方<rt>よみかた</rt></ruby>を<ruby>消<rt>け</rt></ruby>す';
+    }
+});
+</script>
+
+</body>
+</html>
+
+
+
