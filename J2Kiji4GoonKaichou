@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>NHK Easy Article</title>
+<style>
+/* ====== BASIC LAYOUT ====== */
+body {
+    font-family: "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
+    line-height: 1.8;
+    font-size: 16px;
+    color: #222;
+    margin: 20px auto;
+    max-width: 900px;
+    padding: 0 14px;
+    background-color: #fff;
+}
+
+/* ====== CONTROL BUTTONS ====== */
+#nhk-controls {
+    margin: 15px 0 25px 0;
+    text-align: center;
+}
+.nhk-btn {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 24px;
+    background-color: #9f75d1; /* lavender */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.425em; /* ~24px */
+    border: none;
+    transition: background-color 0.2s ease;
+}
+.nhk-btn:hover {
+    background-color: #805ab0; /* slightly darker lavender on hover */
+}
+
+/* ====== FURIGANA TOGGLE ====== */
+#nhk-article.hide-furigana rt {
+    display: none;
+}
+
+/* ====== DICTIONARY POPUPS (hover) ====== */
+.dicWin {
+    cursor: help;
+    text-decoration: underline dotted;
+    position: relative;
+}
+.dicWin:hover::after {
+    content: attr(data-def);
+    position: absolute;
+    top: 1.6em;
+    left: 0;
+    white-space: normal;
+    background-color: #ffffe0;
+    border: 1px solid #ccc;
+    padding: 6px 8px;
+    font-size: 0.9em;
+    color: #000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    z-index: 9999;
+    width: max-content;
+    max-width: 320px;
+}
+
+/* small helpers */
+img { max-width: 100%; height: auto; display: block; margin: 8px auto; }
+.under { text-decoration: underline; }
+
+/* ====== COLOR LEGEND ====== */
+.article-main__colors {
+    margin-top: 20px;
+}
+.about-word-color__list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 0 8px 0;
+}
+.word-color-list__item {
+    font-size: 0.95em;
+    color: #333;
+    margin-bottom: 6px;
+}
+.word-color-list__item span {
+    vertical-align: middle;
+}
+.about-word-color__caution {
+    color:#666;
+    font-size:0.95em;
+    margin-top:8px;
+}
+
+.color-legend-box {
+    background-color: #F5F5DC; /* light beige */
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 6px;
+}
+    
+/* ====== PAGE BANNER ====== */
+#page-banner {
+    background-color: #0078d7; /* blue */
+    color: #fff;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 15px 0;
+    margin: 0 0 20px 0;
+    border-radius: 4px;
+}
+
+/*==== Details line spacing ==== */
+details p {
+  margin: 0.5em 0;   /* smaller vertical margin */
+  line-height: 1.4;  /* normal line spacing */
+}
+    
+</style>
+</head>
+<body>
+
+<!-- ====== PAGE BANNER ====== -->
+<div id="page-banner">
+    NEWS WEB EASY やさしい日本語
+</div>
+
+<!-- ====== CONTROL BUTTON ====== -->
+<div id="nhk-controls">
+    <button class="nhk-btn" id="toggle-furigana">
+        <ruby>漢字<rt>かんじ</rt></ruby>の<ruby>読み方<rt>よみかた</rt></ruby>を<ruby>消<rt>け</rt></ruby>す
+    </button>
+</div>
+
+<!-- ====== ARTICLE CONTENT ====== -->
+<div id="nhk-article">
+
+<h3 style="font-size: 20px; margin-bottom: 6px;">
+    <ruby>日産<rt>にっさん</rt></ruby>のゴーン<ruby>前会長<rt>ぜんかいちょう</rt></ruby>「<ruby>私<rt>わたし</rt></ruby>は<ruby>悪<rt>わる</rt></ruby>いことをしていない」
+</h3>
+
+<p style="text-align: center;">
+    <img src="https://github.com/ZoeSensei/J2Kiji/blob/main/J2Kiji4-1.jpg?raw=true" alt="ゴーン前会長のビデオ">
+</p>
+
+<p style="color: #555; margin-bottom: 20px;">[04月10日 16時25分]</p>
+
+<p>
+    <strong style="color: #0e68b3;"><ruby>日産<rt>にっさん</rt></ruby></strong>の
+    <span class="dicWin" data-def="いちばん上のこと">トップ</span>だった
+    <strong style="color: #03893d;">カルロス・ゴーン</strong><ruby>前会長<rt>ぜんかいちょう</rt></ruby>は、
+    <strong style="color: #0e68b3;"><ruby>日産<rt>にっさん</rt></ruby></strong>が<ruby>別<rt>べつ</rt></ruby>の<ruby>会社<rt>かいしゃ</rt></ruby>に<ruby>払<rt>はら</rt></ruby>ったお<ruby>金<rt>かね</rt></ruby>の
+    <span class="dicWin" data-def="すこし。あるパート。"><ruby>一部<rt>いちぶ</rt></ruby></span>を<ruby>自分<rt>じぶん</rt></ruby>のために<ruby>使<rt>つか</rt></ruby>った
+    <span class="dicWin" data-def="１）本当かうそかしらないこと。本当じゃないかと思う気持ち。２）わるいことが本当だと思うこと。"><ruby><rt>うたが</rt></ruby>い</span>で、
+    <ruby>４日<rt>よっか</rt></ruby>にまた
+    <span class="dicWin" data-def="けいさつにつかまえたこと。ポリスと一緒にステーションに行かせること。">逮捕<rt>たいほ</rt></ruby></span>されました。
+</p>
+
+<p>
+    <strong style="color: #03893d;">ゴーン</strong><ruby>前会長<rt>ぜんかいちょう</rt></ruby>の
+    <span class="dicWin" data-def="国のルールにこまっている人を手伝うしごとだ。"><ruby>弁護士<rt>べんごし</rt></ruby></span>は<ruby>９日<rt>ここのか</rt></ruby>、
+    <span class="dicWin" data-def="けいさつにつかまえたこと。ポリスと一緒にステーションに行かせること。"><ruby>逮捕<rt>たいほ</rt></ruby></span>の<ruby>前<rt>まえ</rt></ruby>に
+    <strong style="color: #03893d;">ゴーン</strong><ruby>前会長<rt>ぜんかいちょう</rt></ruby>が<ruby>英語<rt>えいご</rt></ruby>で<ruby>話<rt>はな</rt></ruby>した
+    <span class="dicWin" data-def="動画（どうが）">ビデオ</span>をみんなに<ruby>見<rt>み</rt></ruby>せました。
+    <span class="dicWin" data-def="動画（どうが）">ビデオ</span>は７<ruby>分<rt>ふん</rt></ruby>３０
+    <span class="dicWin" data-def="分のパート。一分には３０秒がある。"><ruby>秒<rt>びょう</rt></ruby></span>ぐらいありました。
+</p>
+
+<p>
+    <strong style="color: #03893d;">ゴーン</strong><ruby>前会長<rt>ぜんかいちょう</rt></ruby>は「<ruby>私<rt>わたし</rt></ruby>は<ruby>悪<rt>わる</rt></ruby>いことをしていません。
+    <ruby>私<rt>わたし</rt></ruby>のことを<ruby>悪<rt>わる</rt></ruby>く<ruby>言<rt>い</rt></ruby>っている<ruby>話<rt>はなし</rt></ruby>もうそです。
+    <ruby>全部<rt>ぜんぶ</rt></ruby>『<ruby>人<rt>ひと</rt></ruby>を
+    <span class="dicWin" data-def="うそを言って、本当じゃないことを本当だと思い込ませる">だます</span>ための
+    <ruby>悪<rt>わる</rt></ruby>い
+    <span class="dicWin" data-def="なにかをするまえに、スケジュールやその仕方をきめることだ。"><ruby>計画<rt>けいかく</rt></ruby></span>』です」と<ruby>言<rt>い</rt></ruby>いました。
+</p>
+
+<p>
+    そして、これからの<strong style="color: #0e68b3;"><ruby>日産<rt>にっさん</rt></ruby></strong>について「<ruby>会社<rt>かいしゃ</rt></ruby>の
+    <span class="dicWin" data-def="会社のほんの一部。株を買う人は会社の一部を持っているということだ。"><ruby>株<rt>かぶ</rt></ruby></span>が
+    <ruby>安<rt>やす</rt></ruby>くなって、
+    <span class="dicWin" data-def="ビジネスの出来事だ。"><ruby>業績<rt>ぎょうせき</rt></ruby></span>が
+    <ruby>悪<rt>わる</rt></ruby>くなっています。
+    しかし、<ruby>今<rt>いま</rt></ruby>
+    <span class="dicWin" data-def="マネージすること">経営<rt>けいえい</rt></ruby></span>の
+    <ruby>仕事<rt>しごと</rt></ruby>をしている<ruby>人<rt>ひと</rt></ruby>たちには、
+    <strong style="color: #0e68b3;"><ruby>日産<rt>にっさん</rt></ruby></strong>をよくするための<ruby>計画<rt>けいかく</rt></ruby>がありません」と<ruby>話<rt>はな</rt></ruby>しました。
+  </p>
+
+<p>
+    <ruby>最後<rt>さいご</rt></ruby>に
+    <strong style="color: #03893d;">ゴーン</strong><ruby>前会長<rt>ぜんかいちょう</rt></ruby>は「<ruby>私<rt>わたし</rt></ruby>のいちばんの
+    <span class="dicWin" data-def="ほしいこと">願</span><rt>ねが</rt></ruby>い</span>は
+    <ruby>正<rt>ただ</rt></ruby>しい
+    <span class="dicWin" data-def="国のルールや人のことを決めるシステム">裁判<rt>さいばん</rt></ruby></span>をしてもらうことです。
+    <span class="dicWin" data-def="国のルールや人のことを決めるシステム"><ruby>裁判<rt>さいばん</rt></ruby></span>で、
+    <ruby>私<rt>わたし</rt></ruby>は<ruby>悪<rt>わる</rt></ruby>いことをしていないと
+    <span class="dicWin" data-def="あることが本当だと明らかにすること"><ruby>証明<rt>しょうめい</rt></ruby></span>したいです」と<ruby>言<rt>い</rt></ruby>いました。
+</p>
+
+<!-- Audio player -->
+<p style="text-align: center; margin: 20px 0;">
+    <audio controls>
+        <source src="https://zoesensei.github.io/J2Kiji/J2Kiji4Listen.mp3" type="audio/mpeg">
+    </audio>
+</p>
+    
+<!-- Color legend -->
+<div class="color-legend-box">
+    <ul class="about-word-color__list word-color-list">
+        <li class="word-color-list__item is-person">
+            <span style="color: #03893d;"><strong>[みどり]</strong></span>
+            ...<ruby>人<rt>ひと</rt></ruby>の<ruby>名前<rt>なまえ</rt></ruby>
+        </li>
+        <li class="word-color-list__item is-place">
+            <span style="color: #cf4a00;"><strong>[オレンジ]</strong></span>
+            …<ruby>国<rt>くに</rt></ruby>や<ruby>県<rt>けん</rt></ruby>、<ruby>町<rt>まち</rt></ruby>、<ruby>場所<rt>ばしょ</rt></ruby>などの<ruby>名前<rt>なまえ</rt></ruby>
+        </li>
+        <li class="word-color-list__item is-group">
+            <span style="color: #0e68b3;"><strong>[あお]</strong></span>
+            …<ruby>会社<rt>かいしゃ</rt></ruby>やグループなどの<ruby>名前<rt>なまえ</rt></ruby>
+        </li>
+    </ul>
+</div>
+ 
+<p class="about-word-color__caution">※<span class="dicWin" data-def="下線のあることばをホバーすると意味が表示されます。">下に線があることば</span>は<ruby>辞書<rt>じしょ</rt></ruby>の説明を<ruby>見<rt>み</rt></ruby>ることができます。<ruby>押<rt>お</rt></ruby>すと、<ruby>辞書<rt>じしょ</rt></ruby>の説明を<ruby>見<rt>み</rt></ruby>ることができます。</p>
+
+<details id="normal-news">
+  <summary style="display:none;"></summary>
+  <h3 style="font-size: 20px; margin-bottom: 6px;">ゴーン前会長「すべての嫌疑で私は無実 陰謀だ」動画を公開</h3>
+  <p style="color: #555; margin-bottom: 20px;">2019年4月9日 16時33分</p>
+
+    <p>日産自動車のゴーン前会長が、再逮捕される前にみずからの主張を英語で録画した動画を９日、弁護士が公開し、この中で前会長は「すべての嫌疑について私は無実で、今起きていることは陰謀だ」と訴えました。</p>
+
+<p style="text-align: center;">
+    <img src="https://github.com/ZoeSensei/J2Kiji/blob/main/J2Kiji4-2.jpg?raw=true" alt="弘中惇一郎弁護士">
+</p>
+
+<p>日産自動車の前会長カルロス・ゴーン容疑者（65）はオマーンの販売代理店に日産から支出させた資金の一部を私的に流用したとして、今月４日、特別背任の疑いで東京地検特捜部に再逮捕されました。</p>
+
+<p>前会長の弁護を担当する弘中惇一郎弁護士は９日、東京 丸の内の日本外国特派員協会で会見を開き、前会長が再逮捕される前にみずからの主張を事前に英語で録画した、およそ７分30秒の動画を公開しました。</p>
+
+<p>この中で、前会長はまず「すべての嫌疑について私は無実で、私に対しての非難も事実無根だ。こうした非難は私を強欲な人物、あるいは独裁的な人物として塗り固めるためになされたもので、今起きていることは『陰謀』『謀略』『中傷』だ」と述べました。</p>
+
+<p>そして事件の背景については「アライアンスの次のステップ、つまり統合・合併に向けて進むことが、ある人たちには確かな脅威を与え、日産の独立性を脅かすかもしれないと恐れた」としたうえで、「独立性は業績に支えられなければならず、独立性を得ること自体が目的となることはありえない。数名の幹部は明らかに自分たちの利益のために、自分勝手な恐れを抱いたために会社の価値を毀損した」と述べました。</p>
+
+<p>また今後の日産については「株価の下落と業績の低下を目にしながらも、現経営幹部には日産の業績向上やアライアンスの将来をより強化するためのビジョンはない。それを見るのは非常に悲しいことで、本当にうんざりさせられている。テーブルを囲んでコンセンサスで意思決定をしていくことは、競争の激しい自動車業界で何のビジョンも生み出さない」と述べ、現経営陣を強く批判しました。</p>
+
+<p>そして最後に、ゴーン前会長は「私が最も強く望むことは公正な裁判を受けることだが、弁護士から裁判の公正性について安心材料は提供してもらえていない。この裁判で私の無実を証明したいと、せつに願っている」と述べました。</p>
+
+<p>弘中弁護士によりますと、動画には当初、ゴーン前会長が批判した日産の経営陣の実名も記録されていましたが、弁護団の判断でその部分をカットし、前会長の了承も得たうえで公開したということです。</p>
+
+<p>弘中弁護士は前会長が事件の詳しい内容を説明しなかった理由について、「検察から証拠の開示や主張がほとんどされてない中で、前会長が想像で発言するのは不適当なためだ」と述べました。</p>
+
+<h4 style="font-size: 15px; margin-bottom: 3px;">弘中弁護士「黙秘するようアドバイス」</h4>
+
+<p>弘中弁護士は９日の記者会見の中で、「今回の逮捕・勾留は逃亡や証拠隠滅の防止ではなく、ゴーン前会長に不当な圧力をかけ、屈服させることをねらったものだ」と述べ、裁判所が勾留を認めたことを不服とし、10日、最高裁判所に特別抗告の手続きを取ることを明らかにしました。</p>
+
+<p>また、弁護団としてゴーン前会長に対し、取り調べでは黙秘するようアドバイスしていることも明らかにしました。</p>
+
+<p>このほか、東京地検特捜部が裁判所に参考人として尋問する手続きを請求したあとフランスに出国した妻のキャロルさんについて、「逮捕されることはないと確信し、証人として尋問に応じるようアドバイスした。キャロルさんは恐れておらず、尋問に応じる予定だ」と述べました。</p>
+
+<h4 style="font-size: 15px; margin-bottom: 3px;">西川社長「一生懸命やっている」</h4>
+
+<p>日産自動車の西川廣人社長は９日夜、記者団に対して、ゴーン前会長が公開した動画の中で、今起きていることは日産の幹部による陰謀だなどと訴えたことについて「私は動画をじっくり見ていないので分からない」と述べました。</p>
+
+<p>また、前会長が、経営陣がビジョンを持っていないため、日産の業績が低迷していると批判したことについては「一生懸命やっていますので、そういうことはない」と述べました。</p>
+
+<p>一方、今週、フランスで開かれる日産、三菱自動車、ルノーの３社の経営トップでつくる新たな会議の初会合に向けては、「最初の会議なので、今ある問題点とこれから取り組むべきことを整理して、いくつかの活動をキックオフさせたい」と述べました。</p>
+</details>
+
+<div style="text-align:center; margin-top: 10px;">
+  <button id="toggle-news" class="nhk-btn">
+    <ruby>普通<rt>ふつう</rt></ruby>のニュースを
+    <ruby>読<rt>よ</rt></ruby>む
+  </button>
+</div>
+    
+</div>
+
+<!-- ====== SCRIPT ====== -->
+<script>
+const btn = document.getElementById('toggle-furigana');
+btn.addEventListener('click', () => {
+    const article = document.getElementById('nhk-article');
+    article.classList.toggle('hide-furigana');
+
+    if(article.classList.contains('hide-furigana')){
+        btn.innerHTML = '<ruby>漢字<rt>かんじ</rt></ruby>の<ruby>読み方<rt>よみかた</rt></ruby>を<ruby>付<rt>つ</rt></ruby>ける';
+    } else {
+        btn.innerHTML = '<ruby>漢字<rt>かんじ</rt></ruby>の<ruby>読み方<rt>よみかた</rt></ruby>を<ruby>消<rt>け</rt></ruby>す';
+    }
+});
+</script>
+
+<script>
+// Button toggles the <details>
+const newsBtn = document.getElementById('toggle-news');
+const details = document.getElementById('normal-news');
+
+newsBtn.addEventListener('click', () => {
+    details.open = !details.open;
+});
+</script>
+    
+</body>
+</html>
