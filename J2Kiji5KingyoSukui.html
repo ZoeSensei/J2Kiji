@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>NHK Easy Article</title>
+<style>
+/* ====== BASIC LAYOUT ====== */
+body {
+    font-family: "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
+    line-height: 1.8;
+    font-size: 16px;
+    color: #222;
+    margin: 20px auto;
+    max-width: 900px;
+    padding: 0 14px;
+    background-color: #fff;
+}
+
+/* ====== CONTROL BUTTONS ====== */
+#nhk-controls {
+    margin: 15px 0 25px 0;
+    text-align: center;
+}
+.nhk-btn {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 24px;
+    background-color: #9f75d1; /* lavender */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.425em; /* ~24px */
+    border: none;
+    transition: background-color 0.2s ease;
+}
+.nhk-btn:hover {
+    background-color: #805ab0; /* slightly darker lavender on hover */
+}
+
+/* ====== FURIGANA TOGGLE ====== */
+#nhk-article.hide-furigana rt {
+    display: none;
+}
+
+/* ====== DICTIONARY POPUPS (hover) ====== */
+.dicWin {
+    cursor: help;
+    text-decoration: underline dotted;
+    position: relative;
+}
+.dicWin:hover::after {
+    content: attr(data-def);
+    position: absolute;
+    top: 1.6em;
+    left: 0;
+    white-space: normal;
+    background-color: #ffffe0;
+    border: 1px solid #ccc;
+    padding: 6px 8px;
+    font-size: 0.9em;
+    color: #000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    z-index: 9999;
+    width: max-content;
+    max-width: 320px;
+}
+
+/* small helpers */
+img { max-width: 100%; height: auto; display: block; margin: 8px auto; }
+.under { text-decoration: underline; }
+
+/* ====== COLOR LEGEND ====== */
+.article-main__colors {
+    margin-top: 20px;
+}
+.about-word-color__list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 0 8px 0;
+}
+.word-color-list__item {
+    font-size: 0.95em;
+    color: #333;
+    margin-bottom: 6px;
+}
+.word-color-list__item span {
+    vertical-align: middle;
+}
+.about-word-color__caution {
+    color:#666;
+    font-size:0.95em;
+    margin-top:8px;
+}
+
+.color-legend-box {
+    background-color: #F5F5DC; /* light beige */
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 6px;
+}
+    
+/* ====== PAGE BANNER ====== */
+#page-banner {
+    background-color: #0078d7; /* blue */
+    color: #fff;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 15px 0;
+    margin: 0 0 20px 0;
+    border-radius: 4px;
+}
+
+/*==== Details line spacing ==== */
+details p {
+  margin: 0.5em 0;   /* smaller vertical margin */
+  line-height: 1.4;  /* normal line spacing */
+}
+    
+</style>
+</head>
+<body>
+
+<!-- ====== PAGE BANNER ====== -->
+<div id="page-banner">
+    NEWS WEB EASY やさしい日本語
+</div>
+
+<!-- ====== CONTROL BUTTON ====== -->
+<div id="nhk-controls">
+    <button class="nhk-btn" id="toggle-furigana">
+        <ruby>漢字<rt>かんじ</rt></ruby>の<ruby>読み方<rt>よみかた</rt></ruby>を<ruby>消<rt>け</rt></ruby>す
+    </button>
+</div>
+
+<!-- ====== ARTICLE CONTENT ====== -->
+<div id="nhk-article">
+
+<h3 style="font-size: 20px; margin-bottom: 6px;">
+    <ruby>高校生<rt>こうこうせい</rt></ruby>　「<ruby>金魚<rt>きんぎょ</rt></ruby>すくい」が<ruby>上手<rt>じょうず</rt></ruby>で<ruby>大学<rt>だいがく</rt></ruby>に<ruby>合格<rt>ごうかく</rt></ruby>する
+</h3>
+
+<p style="text-align: center;">
+    <img src="https://github.com/ZoeSensei/J2Kiji/blob/main/J2Kiji5-1.jpg?raw=true" alt="三宅さんが合格証明書を持ち上げる">
+</p>
+
+<p style="color: #555; margin-bottom: 20px;">[2019年12月16日 16時15分]</p>
+
+<p>
+　<strong style="color: #0e68b3;"><ruby>関西外国語大学<rt>かんさいがいこくごだいがく</rt></ruby></strong>は、
+　<ruby>勉強<rt>べんきょう</rt></ruby><ruby>以外<rt>いがい</rt></ruby>の<ruby>何<rt>なに</rt></ruby>かがとても
+　<ruby>上手<rt>じょうず</rt></ruby>な<ruby>人<rt>ひと</rt></ruby>を<ruby>大学<rt>だいがく</rt></ruby>に
+　<ruby>入<rt>い</rt></ruby>れています。
+　<ruby>高校<rt>こうこう</rt></ruby>３<ruby>年生<rt>ねんせい</rt></ruby>の
+　<strong style="color: #03893d;"><ruby>三宅<rt>みやけ</rt></ruby><ruby>莉緒<rt>りお</rt></ruby></strong>さんが
+　「<ruby>金魚<rt>きんぎょ</rt></ruby>すくい」でこの<ruby>大学<rt>だいがく</rt></ruby>に
+　<span class="dicWin" data-def="大きなテストをうけていいポイントをとること。それから、大学などに入れること。"><ruby>合格<rt>ごうかく</rt></ruby></span>しました。
+</p>
+
+<p>
+　「<ruby>金魚<rt>きんぎょ</rt></ruby>すくい」は、<ruby>紙<rt>かみ</rt></ruby>を<ruby>貼<rt>は</rt></ruby>った
+　スプーンのような<ruby>道具<rt>どうぐ</rt></ruby>で
+　<span class="dicWin" data-def="小さな金色の魚。よくペットになる。"><ruby>金魚<rt>きんぎょ</rt></ruby></span>を
+　<span class="dicWin" data-def="手伝う。たすける。">すくう</span><ruby>遊<rt>あそ</rt></ruby>びです。
+　<strong style="color: #03893d;"><ruby>三宅<rt>みやけ</rt></ruby></strong>さんは
+　<strong style="color: #cf4a00;"><ruby>奈良県<rt>ならけん</rt></ruby><ruby>大和郡山市<rt>やまとこおりやまし</rt></ruby></strong>の
+　<span class="dicWin" data-def="たくさんの人が来る大きなエベント。とくにスポーツのエベント。"><ruby>大会<rt>たいかい</rt></ruby></span>で
+　<strong style="color: #cf4a00;"><ruby>日本<rt>にっぽん</rt></ruby></strong>で２<ruby>番<rt>ばん</rt></ruby>になりました。
+</p>
+
+<p>
+　<ruby>大学<rt>だいがく</rt></ruby>は「<ruby>金魚<rt>きんぎょ</rt></ruby>すくい」と<ruby>高校<rt>こうこう</rt></ruby>の
+　<span class="dicWin" data-def="学校でのクラスのスコアやてんすう。"><ruby>成績<rt>せいせき</rt></ruby></span>や
+　<span class="dicWin" data-def="たくさんの人が来る大きなエベント。とくにスポーツのエベント。"><ruby><span class="under">面接<rt>めんせつ</rt></ruby></span>などで、
+　<strong style="color: #03893d;"><ruby>三宅<rt>みやけ</rt></ruby></strong>さんを
+　<span class="dicWin" data-def="大きなテストをうけていいポイントをとること。それから、大学などに入れること。"><ruby>合格<rt>ごうかく</rt></ruby></span>にしました。
+　<strong style="color: #03893d;"><ruby>三宅<rt>みやけ</rt></ruby></strong>さんは
+　「<ruby>金魚<rt>きんぎょ</rt></ruby>すくいで<ruby>大学<rt>だいがく</rt></ruby>に
+　<span class="dicWin" data-def="大きなテストをうけていいポイントをとること。それから、大学などに入れること。"><ruby>合格<rt>ごうかく</rt></ruby></span>できるとは
+　<ruby>思<rt>おも</rt></ruby>っていなかったので、とても<ruby>驚<rt>おどろ</rt></ruby>きました。
+　<ruby>大学<rt>だいがく</rt></ruby>で<ruby>英語<rt>えいご</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>して、
+　<ruby>世界<rt>せかい</rt></ruby>の<ruby>人<rt>ひと</rt></ruby>たちに<ruby>金魚<rt>きんぎょ</rt></ruby>すくいの<ruby>楽<rt>たの</rt></ruby>しさを
+　<ruby>伝<rt>つた</rt></ruby>えたいです」と<ruby>話<rt>はな</rt></ruby>していました。
+</p>
+
+<!-- Audio player -->
+<p style="text-align: center; margin: 20px 0;">
+    <audio controls>
+        <source src="https://zoesensei.github.io/J2Kiji/J2Kiji5Listen.mp3" type="audio/mpeg">
+    </audio>
+</p>
+    
+<!-- Color legend -->
+<div class="color-legend-box">
+    <ul class="about-word-color__list word-color-list">
+        <li class="word-color-list__item is-person">
+            <span style="color: #03893d;"><strong>[みどり]</strong></span>
+            ...<ruby>人<rt>ひと</rt></ruby>の<ruby>名前<rt>なまえ</rt></ruby>
+        </li>
+        <li class="word-color-list__item is-place">
+            <span style="color: #cf4a00;"><strong>[オレンジ]</strong></span>
+            …<ruby>国<rt>くに</rt></ruby>や<ruby>県<rt>けん</rt></ruby>、<ruby>町<rt>まち</rt></ruby>、<ruby>場所<rt>ばしょ</rt></ruby>などの<ruby>名前<rt>なまえ</rt></ruby>
+        </li>
+        <li class="word-color-list__item is-group">
+            <span style="color: #0e68b3;"><strong>[あお]</strong></span>
+            …<ruby>会社<rt>かいしゃ</rt></ruby>やグループなどの<ruby>名前<rt>なまえ</rt></ruby>
+        </li>
+    </ul>
+</div>
+ 
+<p class="about-word-color__caution">※<span class="dicWin" data-def="下線のあることばをホバーすると意味が表示されます。">下に線があることば</span>は<ruby>辞書<rt>じしょ</rt></ruby>の説明を<ruby>見<rt>み</rt></ruby>ることができます。<ruby>押<rt>お</rt></ruby>すと、<ruby>辞書<rt>じしょ</rt></ruby>の説明を<ruby>見<rt>み</rt></ruby>ることができます。</p>
+
+<details id="normal-news">
+  <summary style="display:none;"></summary>
+  <h3 style="font-size: 20px; margin-bottom: 6px;">金魚すくいで “一芸入試” 全国大会 好成績で大学合格は初</h3>
+  <p style="color: #555; margin-bottom: 20px;">2019年12月13日 16時10分</p>
+
+    <p>さまざまな分野で優れた成績をおさめた学生を選抜する、関西外国語大学のいわゆる「一芸入試」に、金魚すくいの全国大会で好成績をおさめた高校生が挑み合格しました。大会を開いている奈良県大和郡山市によりますと、金魚すくい大会の成績で大学に合格したのは初めてだということです。</p>
+
+<p style="text-align: center;">
+    <img src="https://github.com/ZoeSensei/J2Kiji/blob/main/J2Kiji5-2.jpg?raw=true" alt="三宅さんが大会で金魚すくいをしている">
+</p>
+
+<p>関西外国語大学に合格したのは、大阪 平野区の高校３年生、三宅莉緒さん（17）です。</p>
+
+<p>三宅さんは、奈良県大和郡山市で毎年開かれる金魚すくい全国大会の一般部門で、高校１年のときに４位になって以降、３位、２位と年々順位を上げ好成績をおさめました。</p>
+
+<p>この金魚すくいを特技として、大阪 枚方市にある関西外国語大学のいわゆる「一芸入試」を受験し、高校での成績や小論文・面接の結果と合わせ、合格しました。</p>
+
+<p>三宅さんは小学４年生のときから毎週１回、大和郡山市にある金魚すくいの道場で練習を重ねてきたということです。</p>
+
+<p>三宅さんは「まさか金魚すくいで大学に合格するとは思っていなかったのでとても驚きました。英語をしっかり勉強し、海外の人たちに金魚すくいの魅力を伝えていきたいです」と話していました。</p>
+
+<p>金魚すくいの全国大会は、全国有数の金魚の産地、大和郡山市が平成７年から毎年開いていますが、大会の成績によって大学に合格したのは初めてだということです。</p>
+</details>
+
+<div style="text-align:center; margin-top: 10px;">
+  <button id="toggle-news" class="nhk-btn">
+    <ruby>普通<rt>ふつう</rt></ruby>のニュースを
+    <ruby>読<rt>よ</rt></ruby>む
+  </button>
+</div>
+    
+</div>
+
+<!-- ====== SCRIPT ====== -->
+<script>
+const btn = document.getElementById('toggle-furigana');
+btn.addEventListener('click', () => {
+    const article = document.getElementById('nhk-article');
+    article.classList.toggle('hide-furigana');
+
+    if(article.classList.contains('hide-furigana')){
+        btn.innerHTML = '<ruby>漢字<rt>かんじ</rt></ruby>の<ruby>読み方<rt>よみかた</rt></ruby>を<ruby>付<rt>つ</rt></ruby>ける';
+    } else {
+        btn.innerHTML = '<ruby>漢字<rt>かんじ</rt></ruby>の<ruby>読み方<rt>よみかた</rt></ruby>を<ruby>消<rt>け</rt></ruby>す';
+    }
+});
+</script>
+
+<script>
+// Button toggles the <details>
+const newsBtn = document.getElementById('toggle-news');
+const details = document.getElementById('normal-news');
+
+newsBtn.addEventListener('click', () => {
+    details.open = !details.open;
+});
+</script>
+    
+</body>
+</html>
