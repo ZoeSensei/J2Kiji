@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>NHK Easy Article</title>
+<style>
+/* ====== BASIC LAYOUT ====== */
+body {
+    font-family: "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
+    line-height: 1.8;
+    font-size: 16px;
+    color: #222;
+    margin: 20px auto;
+    max-width: 900px;
+    padding: 0 14px;
+    background-color: #fff;
+}
+
+/* ====== CONTROL BUTTONS ====== */
+#nhk-controls {
+    margin: 15px 0 25px 0;
+    text-align: center;
+}
+.nhk-btn {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 24px;
+    background-color: #9f75d1; /* lavender */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.425em; /* ~24px */
+    border: none;
+    transition: background-color 0.2s ease;
+}
+.nhk-btn:hover {
+    background-color: #805ab0; /* slightly darker lavender on hover */
+}
+
+/* ====== FURIGANA TOGGLE ====== */
+#nhk-article.hide-furigana rt {
+    display: none;
+}
+
+/* ====== DICTIONARY POPUPS (hover) ====== */
+.dicWin {
+    cursor: help;
+    text-decoration: underline dotted;
+    position: relative;
+}
+.dicWin:hover::after {
+    content: attr(data-def);
+    position: absolute;
+    top: 1.6em;
+    left: 0;
+    white-space: normal;
+    background-color: #ffffe0;
+    border: 1px solid #ccc;
+    padding: 6px 8px;
+    font-size: 0.9em;
+    color: #000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    z-index: 9999;
+    width: max-content;
+    max-width: 320px;
+}
+
+/* small helpers */
+img { max-width: 100%; height: auto; display: block; margin: 8px auto; }
+.under { text-decoration: underline; }
+
+/* ====== COLOR LEGEND ====== */
+.article-main__colors {
+    margin-top: 20px;
+}
+.about-word-color__list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 0 8px 0;
+}
+.word-color-list__item {
+    font-size: 0.95em;
+    color: #333;
+    margin-bottom: 6px;
+}
+.word-color-list__item span {
+    vertical-align: middle;
+}
+.about-word-color__caution {
+    color:#666;
+    font-size:0.95em;
+    margin-top:8px;
+}
+
+.color-legend-box {
+    background-color: #F5F5DC; /* light beige */
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 6px;
+}
+    
+/* ====== PAGE BANNER ====== */
+#page-banner {
+    background-color: #0078d7; /* blue */
+    color: #fff;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 15px 0;
+    margin: 0 0 20px 0;
+    border-radius: 4px;
+}
+
+/*==== Details line spacing ==== */
+details p {
+  margin: 0.5em 0;   /* smaller vertical margin */
+  line-height: 1.4;  /* normal line spacing */
+}
+    
+</style>
+</head>
+<body>
+
+<!-- ====== PAGE BANNER ====== -->
+<div id="page-banner">
+    NEWS WEB EASY やさしい日本語
+</div>
+
+<!-- ====== CONTROL BUTTON ====== -->
+<div id="nhk-controls">
+    <button class="nhk-btn" id="toggle-furigana">
+        <ruby>漢字<rt>かんじ</rt></ruby>の<ruby>読み方<rt>よみかた</rt></ruby>を<ruby>消<rt>け</rt></ruby>す
+    </button>
+</div>
+
+<!-- ====== ARTICLE CONTENT ====== -->
+<div id="nhk-article">
+
+<h3 style="font-size: 20px; margin-bottom: 6px;">
+    <ruby>目<rt>め</rt></ruby>が<ruby>斜視<rt>しゃし</rt></ruby>になる<ruby>子<rt>こ</rt></ruby>どもが<ruby>多<rt>おお</rt></ruby>い　スマホと<ruby>関係<rt>かんけい</rt></ruby>があるか<ruby>調<rt>しら</rt></ruby>べる
+</h3>
+
+<p style="text-align: center;">
+    <img src="https://github.com/ZoeSensei/J2Kiji/blob/main/J2Kiji6.jpg?raw=true" alt="スマホを見ている子供">
+</p>
+
+<p style="color: #555; margin-bottom: 20px;">[2018年12月28日 11時30分]</p>
+
+<p>
+  <ruby>何<rt>なに</rt></ruby>かを<ruby>見<rt>み</rt></ruby>るとき、
+  <ruby>右<rt>みぎ</rt></ruby>と<ruby>左<rt>ひだり</rt></ruby>の<ruby>目<rt>め</rt></ruby>が<ruby>違<rt>ちが</rt></ruby>う
+  <span class="dicWin" data-def="みぎ、ひだり、上、下など"><ruby>方向<rt>ほうこう</rt></ruby></strong>を<ruby>向<rt>む</rt></ruby>いている
+    <ruby>状態<rt>じょうたい</rt></ruby>を「<ruby>斜視<rt>しゃし</rt></ruby>」と<ruby>言<rt>い</rt></ruby>います。
+</p>
+
+<p>
+  <strong style="color: #cf4a00;"><ruby>静岡県<rt>しずおかけん</rt></ruby></strong>にある
+  <strong style="color: #0e68b3;"><ruby>浜松医科大学<rt>はままついかだいがく</rt></ruby></strong>によると、
+  <ruby>目<rt>め</rt></ruby>が<span class="dicWin" data-def="中の方向"><ruby>内側<rt>うちがわ</rt></ruby></span>を<ruby>向<rt>む</rt></ruby>いたまま
+  <ruby>戻<rt>もど</rt></ruby>らなくなる<ruby>斜視<rt>しゃし</rt></ruby>の<ruby>人<rt>ひと</rt></ruby>が３<ruby>年<rt>ねん</rt></ruby><ruby>前<rt>まえ</rt></ruby>から
+  <span class="dicWin" data-def="大きくなる。おおくなる。上に行く。"><ruby>増<rt>ふ</rt></ruby>えています</span>。それより<ruby>前<rt>まえ</rt></ruby>は
+  １<ruby>年<rt>ねん</rt></ruby>に<ruby>２人<rt>ふたり</rt></ruby>か３<ruby>人<rt>にん</rt></ruby>でしたが、１<ruby>年<rt>ねん</rt></ruby>に１０<ruby>人<rt>にん</rt></ruby>
+  ぐらいになりました。<ruby>特<rt>とく</rt></ruby>に１９<ruby>歳<rt>さい</rt></ruby><ruby>以下<rt>いか</rt></ruby>の<ruby>子<rt>こ</rt></ruby>どもが<ruby>増<rt>ふ</rt></ruby>えています。
+</p>
+
+<p>
+  <strong style="color: #0e68b3;"><ruby>浜松医科大学<rt>はままついかだいがく</rt></ruby></strong>の<ruby>先生<rt>せんせい</rt></ruby>は「スマホ（スマートフォン）を
+  <ruby>使<rt>つか</rt></ruby>う<ruby>子<rt>こ</rt></ruby>どもがとても<ruby>多<rt>おお</rt></ruby>くなったころから<ruby>斜視<rt>しゃし</rt></ruby>の<ruby>子<rt>こ</rt></ruby>どもが
+  <ruby>増<rt>ふ</rt></ruby>えています」と<ruby>言<rt>い</rt></ruby>っています。
+</p>
+
+<p>
+  <ruby>国<rt>くに</rt></ruby>の
+  <span class="dicWin" data-def="いしゃとかんごしがしごとをするところ"><ruby>病院<rt>びょういん</rt></ruby></span>の
+  <ruby>研究<rt>けんきゅう</rt></ruby>グループも「スマホなどを<ruby>使<rt>つか</rt></ruby>いすぎると、
+  <ruby>斜視<rt>しゃし</rt></ruby>になったり<ruby>斜視<rt>しゃし</rt></ruby>がひどくなったりする
+  <span class="dicWin" data-def="チャンス"><ruby>可能性<rt>かのうせい</rt></ruby></span>がある」という<ruby>論文<rt>ろんぶん</rt></ruby>を
+  <span class="dicWin" data-def="お知らせをすること"><ruby>発表<rt>はっぴょう</rt></ruby>しました</span>。
+</p>
+
+<p>
+  このため、<ruby>目<rt>め</rt></ruby>の<ruby>病気<rt>びょうき</rt></ruby>を<ruby>研究<rt>けんきゅう</rt></ruby>している<ruby>学会<rt>がっかい</rt></ruby>が、
+  スマホの<ruby>使<rt>つか</rt></ruby>い<ruby>方<rt>かた</rt></ruby>と<ruby>斜視<rt>しゃし</rt></ruby>が
+  <span class="dicWin" data-def="コネクション"><ruby>関係<rt>かんけい</rt></ruby></span>があるか<ruby>調<rt>しら</rt></ruby>べることにしました。
+  １０００<ruby>人<rt>にん</rt></ruby>の<ruby>医者<rt>いしゃ</rt></ruby>に
+  <span class="dicWin" data-def="一緒にがんばってしごとをする"><ruby>協力<rt>きょうりょく</rt></ruby></span>してもらって、
+  <ruby>斜視<rt>しゃし</rt></ruby>になった<ruby>子<rt>こ</rt></ruby>どもがスマホなどを
+  <ruby>長<rt>なが</rt></ruby>い<ruby>時間<rt>じかん</rt></ruby><ruby>使<rt>つか</rt></ruby>っていたか<ruby>調<rt>しら</rt></ruby>べます。
+  <ruby>使<rt>つか</rt></ruby>う<ruby>時間<rt>じかん</rt></ruby>を<ruby>短<rt>みじか</rt></ruby>くしたら、<ruby>斜視<rt>しゃし</rt></ruby>がよくなるかどうかも
+  <ruby>調<rt>しら</rt></ruby>べます。
+</p>
+  
+<!-- Audio player -->
+<p style="text-align: center; margin: 20px 0;">
+    <audio controls>
+        <source src="https://zoesensei.github.io/J2Kiji/J2Kiji6Listen.mp3" type="audio/mpeg">
+    </audio>
+</p>
+    
+<!-- Color legend -->
+<div class="color-legend-box">
+    <ul class="about-word-color__list word-color-list">
+        <li class="word-color-list__item is-person">
+            <span style="color: #03893d;"><strong>[みどり]</strong></span>
+            ...<ruby>人<rt>ひと</rt></ruby>の<ruby>名前<rt>なまえ</rt></ruby>
+        </li>
+        <li class="word-color-list__item is-place">
+            <span style="color: #cf4a00;"><strong>[オレンジ]</strong></span>
+            …<ruby>国<rt>くに</rt></ruby>や<ruby>県<rt>けん</rt></ruby>、<ruby>町<rt>まち</rt></ruby>、<ruby>場所<rt>ばしょ</rt></ruby>などの<ruby>名前<rt>なまえ</rt></ruby>
+        </li>
+        <li class="word-color-list__item is-group">
+            <span style="color: #0e68b3;"><strong>[あお]</strong></span>
+            …<ruby>会社<rt>かいしゃ</rt></ruby>やグループなどの<ruby>名前<rt>なまえ</rt></ruby>
+        </li>
+    </ul>
+</div>
+ 
+<p class="about-word-color__caution">※<span class="dicWin" data-def="下線のあることばをホバーすると意味が表示されます。">下に線があることば</span>は<ruby>辞書<rt>じしょ</rt></ruby>の説明を<ruby>見<rt>み</rt></ruby>ることができます。<ruby>押<rt>お</rt></ruby>すと、<ruby>辞書<rt>じしょ</rt></ruby>の説明を<ruby>見<rt>み</rt></ruby>ることができます。</p>
+
+<details id="normal-news">
+  <summary style="display:none;"></summary>
+  <h3 style="font-size: 20px; margin-bottom: 6px;">「変わる日常　子どもの目をどう守るか？」（視点・論点）</h3>
+  <p style="color: #555; margin-bottom: 20px;">2020年06月03日 16時10分</p>
+
+    <p><strong>国立成育医療研究センター　眼科医長　仁科　幸子</strong></p>
+
+<p style="text-align: center;">
+    <img src="https://github.com/ZoeSensei/J2Kiji/blob/main/J2Kiji6-2.png?raw=true" alt="斜視を調べている医者">
+</p>
+<p>新型コロナウイルスによる緊急事態宣言によって、休校や休園が続き、お子さん方の日常は大きく変わりました。緊急事態宣言が解除された現在も、感染に対する不安を抱えながら、ご家庭でお子さんとどのように過ごすか、悩まれていることと思います。</p>
+
+<p>日々子どもの目の病気の治療や研究に取り組んでいる医師や視能訓練士の組織である我々日本小児眼科学会などでは、合同で、緊急事態下の４月に、子どもの目の健康を守るために、みなさまへ大切な注意点を３つ、お知らせいたしました。<br/>
+ここで、その概要について、ご説明したいと思います。</p>
+
+<p>１番目は、デジタル製品との付き合い方についてです。<br/>
+休校や外出の自粛で、ご家庭で過ごす時間が長くなって、お子さんがスマートフォン、タブレット端末、携帯型ゲーム機器など、小型のデジタル製品を使用する時間が長くなっているというお話をよく聞きます。オンライン学習の導入も進んでおり、今後ますます活用する機会が増えることになるでしょう。<br/>
+しかし、デジタル製品の使いすぎで、まず心配されるのは、近視の進行です。</p>
+
+  <p style="text-align: center;">
+    <img src="https://github.com/ZoeSensei/J2Kiji/blob/main/J2Kiji6-3.png?raw=true" alt="斜視の進行">
+</p>
+
+<p>文部科学省の統計によると、裸眼視力1.0未満の小学生、中学生、高校生が急速に増えており、令和元年には、過去最高になりました。その原因の多くは、近視です。近視になると、近くに焦点は合うのですが、遠くには焦点を合わせることができず、遠くの物がぼやけてみえます。眼球の長さが成長する７歳～１７歳頃に進行しますが、強度の近視になると、将来網膜剥離や緑内障など失明につながる病気になりやすくなるので、注意が必要です。<br/>
+近視は、両親から受け継いだ素質と、目の使い方や環境の両方が関わっています。</p>
+  
+<p>デジタル製品を30センチ未満の近距離で、30分以上続けて見ることが、近視の進行につながると言われています。近視に対しては、屋外で活動することが一番の予防策です。</p>
+
+<p>また、デジタル製品の過剰使用によって引き起こされる急性内斜視にも最近、注意が向けられています。</p>
+
+    <p style="text-align: center;">
+    <img src="https://github.com/ZoeSensei/J2Kiji/blob/main/J2Kiji6-4.png?raw=true" alt="斜視のしかた">
+</p>
+
+  
+<p>我々の施設では2015年頃から、スマートフォンや携帯ゲーム機を１日３～４時間以上使用することによって、斜視が発症したり悪化する子どもを診ることが多くなり、全国の専門家の間でも、本来は稀な病気であるはずの急性内斜視の増加が報告されるようになりました。</p>
+
+<p>斜視とは、両目の視線が合っていない状態で、視覚が未発達な乳幼児期に斜視が起こると、両目で物を立体的に見る両眼視機能が育たなくなります。また学童期以降に斜視が起こると、物が２つに見える、“複視”を自覚して日常や学習に支障をきたすようになります。</p>
+
+<p>スマートフォンを見る距離は20センチと短く、疲れを感じない子どもは、つい熱中して使い続けてしまいます。そうすると、かなり近くにピントを合わせる調節力と、両目を極度に内側に寄せる力がずっと働く状態が続いて、戻らなくなり、急性内斜視を発症する危険があります。子どもは一旦内斜視が起こると、デジタル製品の使用を中止しても回復せず、手術が必要になるケースが多いので注意が必要です。</p>
+
+<p>日本弱視斜視学会と日本小児眼科学会の会員に対して2018年に行われた全国調査によると、1年間に5～35歳の若年者の急性内斜視を経験した医師は42.6%にのぼり、うち、デジタル製品が発症に関与したと考えられるケースが77.2%でした。</p>
+
+<p>2019年から全国の多施設で、こうした若年者の急性内斜視の前向き研究を行っており、デジタル製品がどのぐらい関与しているか、リスク因子は何かが解析され、適正な使用基準が示されることとなるでしょう。</p>
+
+<p>子どもの目を守るためには、5歳までは視力、立体視、眼球運動、遠く近くに焦点を合わせる調節力などがバランスよく発達する大事な時期ですので、デジタル製品の使用をなるべく控えること、小学生となっても長時間の使用は控え、30分に1度は5～10分の休憩を入れること、見る距離は30cm以上離して姿勢良く使用することが大事です。今後、適切なデジタル製品との付き合い方が益々重要になってくると思います。家庭内でルールを決めて使用してください。</p>
+
+<p>２番目は乳幼児健診についてです。</p>
+<p>子どもの視覚は聴覚と違って、新生児期には未発達で、ぼんやりとしか見えていません。１歳でようやく0.1から0.2、３歳で0.5、５歳になると1.0以上の視力となります。</p>
+
+<p>発達途上の視覚はとても感受性が高く、目の病気があると、適切な刺激が遮断されて脳まで伝わらず、眼鏡をかけても視力が出ない重度の“弱視”になります。</p>
+
+<p>早く異常をみつけないと、手遅れになってしまうのですが、乳幼児健診が中止や延期となっている地域が多く、どうしても目のことは後回しになってしまうのではないかと心配です。</p>
+
+<p>ぜひ、この機会にお家でお子さんの目をよく観察してください。</p>
+
+<p>目の異常をみつけるチェックポイントを表にまとめました。</p>
+
+<ul>
+<li>瞳が白くみえたり、光ってみえることはないですか</li>
+<li>目の大きさや形がおかしいと思ったことがありますか　などです。</li>
+</ul>
+<p>先天白内障や緑内障、網膜剥離などの重症な目の病気は、乳児のうちに見つけないと手遅れになり、手術を行っても視力が伸びません。</p>
+
+<p>もし、ご家族や血縁の方で、若いうちに、このような病気になった方がおられましたら、生後１か月までに１度眼科で検査をお受けになることをお勧めします。</p>
+
+<p>とくに、目の病気が片目に起こると、よい方の目でみているので、症状がはっきりせず、見逃されがちです。</p>
+
+<p>お子さんの目を観察するときには、ぜひ、片目ずつ手で隠して、左右の目とも物をじっと見ることができるかどうか確認してください。右目に病気があるときには、左目を隠したときだけ嫌がる反応がみられます。また片目だけ斜視になっていて、もう片方の目をかくすと斜視の目で物をしっかりみつめられないときは、急いで眼科へ受診する必要があります。</p>
+
+<p>３歳児健診の視覚検査は、通常は全国で一律に実施されており、左右眼の遠視、近視、乱視の度数に大きく差がある不同視や、両眼の強度の遠視や乱視が原因となって起こる弱視を見つけるための大切な機会です。このようなタイプの弱視は、約50人に1人の割合で起こる頻度の高い病気です。３歳で発見して治療を始めれば、就学までに治癒して、学習や運動に支障が出ませんが、発見がおくれると十分な治療効果が出ません。</p>
+
+<p>弱視の治療の第一は、適切な眼鏡を常に装用することです。そのためには眼科で目薬を使った精密検査を受けて、処方箋をもらう必要があります。</p>
+
+<p>以上、将来を担う子どもの目を守るために、気をつけるべき要点をまとめます。</p>
+
+  <ol>
+<li>デジタル製品との付き合い方に、十分注意をしてください。近視の進行、眼精疲労、斜視の原因となることもあります。見る距離は30センチ以上離して、30分に1回は休憩を入れましょう。</li>
+<li>２．乳幼児健診は大切な機会です。<br/>
+目の病気は早く見つけないと、手遅れになることがあります<br/>
+気になる症状があれば、ぜひ眼科へ受診をしてください</li>
+<li>眼鏡は治療のための大切な医療用具です。<br/>
+必ず眼科で精密検査を受けて処方箋をもらってください</li>
+<ol>
+
+<p>新型コロナ感染拡大を契機に、子どもたちの日常は大きな転換期を迎えています。</p>
+<p>子どもの目は発達途上で、感受性が高いこと、一度損なわれると取り返しがつかないことを、どうぞ忘れないでください。</p>
+
+<p>有難うございました。</p>
+  
+</details>
+
+<div style="text-align:center; margin-top: 10px;">
+  <button id="toggle-news" class="nhk-btn">
+    <ruby>普通<rt>ふつう</rt></ruby>のニュースを
+    <ruby>読<rt>よ</rt></ruby>む
+  </button>
+</div>
+    
+</div>
+
+<!-- ====== SCRIPT ====== -->
+<script>
+const btn = document.getElementById('toggle-furigana');
+btn.addEventListener('click', () => {
+    const article = document.getElementById('nhk-article');
+    article.classList.toggle('hide-furigana');
+
+    if(article.classList.contains('hide-furigana')){
+        btn.innerHTML = '<ruby>漢字<rt>かんじ</rt></ruby>の<ruby>読み方<rt>よみかた</rt></ruby>を<ruby>付<rt>つ</rt></ruby>ける';
+    } else {
+        btn.innerHTML = '<ruby>漢字<rt>かんじ</rt></ruby>の<ruby>読み方<rt>よみかた</rt></ruby>を<ruby>消<rt>け</rt></ruby>す';
+    }
+});
+</script>
+
+<script>
+// Button toggles the <details>
+const newsBtn = document.getElementById('toggle-news');
+const details = document.getElementById('normal-news');
+
+newsBtn.addEventListener('click', () => {
+    details.open = !details.open;
+});
+</script>
+    
+</body>
+</html>
