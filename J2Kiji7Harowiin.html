@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>NHK Easy Article</title>
+<style>
+/* ====== BASIC LAYOUT ====== */
+body {
+    font-family: "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
+    line-height: 1.8;
+    font-size: 16px;
+    color: #222;
+    margin: 20px auto;
+    max-width: 900px;
+    padding: 0 14px;
+    background-color: #fff;
+}
+
+/* ====== CONTROL BUTTONS ====== */
+#nhk-controls {
+    margin: 15px 0 25px 0;
+    text-align: center;
+}
+.nhk-btn {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 24px;
+    background-color: #9f75d1; /* lavender */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.425em; /* ~24px */
+    border: none;
+    transition: background-color 0.2s ease;
+}
+.nhk-btn:hover {
+    background-color: #805ab0; /* slightly darker lavender on hover */
+}
+
+/* ====== FURIGANA TOGGLE ====== */
+#nhk-article.hide-furigana rt {
+    display: none;
+}
+
+/* ====== DICTIONARY POPUPS (hover) ====== */
+.dicWin {
+    cursor: help;
+    text-decoration: underline dotted;
+    position: relative;
+}
+.dicWin:hover::after {
+    content: attr(data-def);
+    position: absolute;
+    top: 1.6em;
+    left: 0;
+    white-space: normal;
+    background-color: #ffffe0;
+    border: 1px solid #ccc;
+    padding: 6px 8px;
+    font-size: 0.9em;
+    color: #000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    z-index: 9999;
+    width: max-content;
+    max-width: 320px;
+}
+
+/* small helpers */
+img { max-width: 100%; height: auto; display: block; margin: 8px auto; }
+.under { text-decoration: underline; }
+
+/* ====== COLOR LEGEND ====== */
+.article-main__colors {
+    margin-top: 20px;
+}
+.about-word-color__list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 0 8px 0;
+}
+.word-color-list__item {
+    font-size: 0.95em;
+    color: #333;
+    margin-bottom: 6px;
+}
+.word-color-list__item span {
+    vertical-align: middle;
+}
+.about-word-color__caution {
+    color:#666;
+    font-size:0.95em;
+    margin-top:8px;
+}
+
+.color-legend-box {
+    background-color: #F5F5DC; /* light beige */
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 6px;
+}
+    
+/* ====== PAGE BANNER ====== */
+#page-banner {
+    background-color: #0078d7; /* blue */
+    color: #fff;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 15px 0;
+    margin: 0 0 20px 0;
+    border-radius: 4px;
+}
+
+/*==== Details line spacing ==== */
+details p {
+  margin: 0.5em 0;   /* smaller vertical margin */
+  line-height: 1.4;  /* normal line spacing */
+}
+    
+</style>
+</head>
+<body>
+
+<!-- ====== PAGE BANNER ====== -->
+<div id="page-banner">
+    NEWS WEB EASY やさしい日本語
+</div>
+
+<!-- ====== CONTROL BUTTON ====== -->
+<div id="nhk-controls">
+    <button class="nhk-btn" id="toggle-furigana">
+        <ruby>漢字<rt>かんじ</rt></ruby>の<ruby>読み方<rt>よみかた</rt></ruby>を<ruby>消<rt>け</rt></ruby>す
+    </button>
+</div>
+
+<!-- ====== ARTICLE CONTENT ====== -->
+<div id="nhk-article">
+
+<h3 style="font-size: 20px; margin-bottom: 6px;">
+    <ruby>目<rt>め</rt></ruby>が<ruby>斜視<rt>しゃし</rt></ruby>になる<ruby>子<rt>こ</rt></ruby>どもが<ruby>多<rt>おお</rt></ruby>い　スマホと<ruby>関係<rt>かんけい</rt></ruby>があるか<ruby>調<rt>しら</rt></ruby>べる
+</h3>
+
+<p style="text-align: center;">
+    <img src="https://github.com/ZoeSensei/J2Kiji/blob/main/J2Kiji6.jpg?raw=true" alt="">
+</p>
+
+<p style="color: #555; margin-bottom: 20px;">[2020年10月28日 12時o0分]</p>
+
+ <p><span class="colorL"><ruby>東京<rt>とうきょう</rt></ruby></span>の<span class="colorL"><ruby>渋谷<rt>しぶや</rt></ruby></span>には<ruby>毎年<rt>まいとし</rt></ruby>、<a href="javascript:void(0)" class="dicWin" id="id-0000"><span class="under">ハロウィーン</span></a>を<ruby>楽<rt>たの</rt></ruby>しむために<ruby>大勢<rt>おおぜい</rt></ruby>の<ruby>人<rt>ひと</rt></ruby>が<ruby>集<rt>あつ</rt></ruby>まります。<span class="colorL"><ruby>渋谷区<rt>しぶやく</rt></ruby></span>などは、<ruby>今年<rt>ことし</rt></ruby>は<ruby>新<rt>あたら</rt></ruby>しいコロナ<a href="javascript:void(0)" class="dicWin" id="id-0001"><span class="under">ウイルス</span></a>の<ruby>問題<rt>もんだい</rt></ruby>があるため、<span class="colorL"><ruby>渋谷<rt>しぶや</rt></ruby></span>に<ruby>来<rt>こ</rt></ruby>ないでほしいと<ruby>言<rt>い</rt></ruby>っています。</p>
+<p>その<ruby>代<rt>か</rt></ruby>わりに<span class="colorL"><ruby>渋谷区<rt>しぶやく</rt></ruby></span>などは、「バーチャル<ruby>渋谷<rt>しぶや</rt></ruby>」という<a href="javascript:void(0)" class="dicWin" id="id-0002"><span class="under">ウェブサイト</span></a>で、<a href="javascript:void(0)" class="dicWin" id="id-0000"><span class="under">ハロウィーン</span></a>を<ruby>楽<rt>たの</rt></ruby>しむことができるようにしました。</p>
+<p>「バーチャル<ruby>渋谷<rt>しぶや</rt></ruby>」の<ruby>中<rt>なか</rt></ruby>には、<span class="colorL"><ruby>渋谷駅<rt>しぶやえき</rt></ruby></span>の<ruby>前<rt>まえ</rt></ruby>にある<ruby>有名<rt>ゆうめい</rt></ruby>な<ruby>交差点<rt>こうさてん</rt></ruby>やハチ<ruby>公<rt>こう</rt></ruby>の<a href="javascript:void(0)" class="dicWin" id="id-0003"><ruby><span class="under">像</span><rt>ぞう</rt></ruby></a>、<ruby>町<rt>まち</rt></ruby>にあるビルの<a href="javascript:void(0)" class="dicWin" id="id-0004"><ruby><span class="under">看板</span><rt>かんばん</rt></ruby></a>などが<a href="javascript:void(0)" class="dicWin" id="id-0005"><ruby><span class="under">本物</span><rt>ほんもの</rt></ruby></a>と<ruby>同<rt>おな</rt></ruby>じように<ruby>作<rt>つく</rt></ruby>ってあります。３１<ruby>日<rt>にち</rt></ruby>までは、<ruby>道<rt>みち</rt></ruby>の<ruby>上<rt>うえ</rt></ruby>に<a href="javascript:void(0)" class="dicWin" id="id-0006"><span class="under">かぼちゃ</span></a>が<a href="javascript:void(0)" class="dicWin" id="id-0007"><ruby><span class="under">浮</span><rt>う</rt></ruby><span class="under">い</span></a>ているなど、<a href="javascript:void(0)" class="dicWin" id="id-0000"><span class="under">ハロウィーン</span></a>らしくなっています。</p>
+<p><ruby>自分<rt>じぶん</rt></ruby>が<ruby>作<rt>つく</rt></ruby>った<a href="javascript:void(0)" class="dicWin" id="id-0008"><span class="under">キャラクター</span></a>を<a href="javascript:void(0)" class="dicWin" id="id-0009"><ruby><span class="under">動</span><rt>うご</rt></ruby><span class="under">かし</span></a>て、<span class="colorL"><ruby>渋谷<rt>しぶや</rt></ruby></span>を<ruby>散歩<rt>さんぽ</rt></ruby>したり、<ruby>音楽<rt>おんがく</rt></ruby>や<ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>を<ruby>楽<rt>たの</rt></ruby>しんだりすることもできます。</p>
+<p>「バーチャル<ruby>渋谷<rt>しぶや</rt></ruby>」は、アプリを<a href="javascript:void(0)" class="dicWin" id="id-0010"><span class="under">ダウンロード</span></a>すると、<a href="javascript:void(0)" class="dicWin" id="id-0011"><ruby><span class="under">無料</span><rt>むりょう</rt></ruby></a>で<ruby>楽<rt>たの</rt></ruby>しむことができます。</p>
+  
+<!-- Audio player -->
+<p style="text-align: center; margin: 20px 0;">
+    <audio controls>
+        <source src="https://zoesensei.github.io/J2Kiji/J2Kiji7Listen.mp3" type="audio/mpeg">
+    </audio>
+</p>
+    
+<!-- Color legend -->
+<div class="color-legend-box">
+    <ul class="about-word-color__list word-color-list">
+        <li class="word-color-list__item is-person">
+            <span style="color: #03893d;"><strong>[みどり]</strong></span>
+            ...<ruby>人<rt>ひと</rt></ruby>の<ruby>名前<rt>なまえ</rt></ruby>
+        </li>
+        <li class="word-color-list__item is-place">
+            <span style="color: #cf4a00;"><strong>[オレンジ]</strong></span>
+            …<ruby>国<rt>くに</rt></ruby>や<ruby>県<rt>けん</rt></ruby>、<ruby>町<rt>まち</rt></ruby>、<ruby>場所<rt>ばしょ</rt></ruby>などの<ruby>名前<rt>なまえ</rt></ruby>
+        </li>
+        <li class="word-color-list__item is-group">
+            <span style="color: #0e68b3;"><strong>[あお]</strong></span>
+            …<ruby>会社<rt>かいしゃ</rt></ruby>やグループなどの<ruby>名前<rt>なまえ</rt></ruby>
+        </li>
+    </ul>
+</div>
+ 
+<p class="about-word-color__caution">※<span class="dicWin" data-def="下線のあることばをホバーすると意味が表示されます。">下に線があることば</span>は<ruby>辞書<rt>じしょ</rt></ruby>の説明を<ruby>見<rt>み</rt></ruby>ることができます。<ruby>押<rt>お</rt></ruby>すと、<ruby>辞書<rt>じしょ</rt></ruby>の説明を<ruby>見<rt>み</rt></ruby>ることができます。</p>
+
+<details id="normal-news">
+  <summary style="display:none;"></summary>
+  <h3 style="font-size: 20px; margin-bottom: 6px;">「バーチャル渋谷」でハロウィーンを 今夜からスタート 東京 </h3>
+  <p style="color: #555; margin-bottom: 20px;">2020年10月26日 16時10分</p>
+
+<p>東京 渋谷区がハロウィーンの時期の街への訪問自粛を呼びかけるなか、仮想空間の渋谷でハロウィーンを楽しもうという催しが26日夜から始まります。</p>
+  
+<p style="text-align: center;">
+    <img src="https://github.com/ZoeSensei/J2Kiji/blob/main/J2Kiji7-1.png?raw=true" alt="">
+</p>
+  
+<p>この催しは、新型コロナウイルスの感染拡大を防ぐため、ハロウィーンの時期の街への訪問自粛を呼びかけている渋谷区が新しい楽しみ方として提案しているものです。</p>
+
+<p style="text-align: center;">
+    <img src="https://github.com/ZoeSensei/J2Kiji/blob/main/J2Kiji7-2.png?raw=true" alt="">
+</p>
+  
+<p>「バーチャル渋谷」では、渋谷駅前のスクランブル交差点や忠犬ハチ公の銅像をはじめ、ビルの看板など細かなところまで渋谷の街が再現されていて、今月31日のハロウィーンまでの間、宙に浮いたかぼちゃなど、実際の街にはないハロウィーン仕様の渋谷の街が表現されています。</p>
+
+<p style="text-align: center;">
+    <img src="https://github.com/ZoeSensei/J2Kiji/blob/main/J2Kiji7-3.png?raw=true" alt="">
+</p>
+
+  <p>アバターと呼ばれる自分の分身で街を散策できるほか、仮想空間の中で、人気アーティストのライブを楽しめたり、オリジナルのグッズを購入できたりするということです。</p>
+
+<p>一般には26日午後7時半から公開され、専用のアプリをダウンロードすれば無料で楽しめます。</p>
+
+<p>画面上に表示されるアバターは50人までとなっていて、「バーチャル渋谷」の中でも密は避けられるということで、渋谷区は「ことしのハロウィーンは『バーチャル渋谷』で新しい楽しみ方を体験してほしい」としています。</p>  
+</details>
+
+<div style="text-align:center; margin-top: 10px;">
+  <button id="toggle-news" class="nhk-btn">
+    <ruby>普通<rt>ふつう</rt></ruby>のニュースを
+    <ruby>読<rt>よ</rt></ruby>む
+  </button>
+</div>
+    
+</div>
+
+<!-- ====== SCRIPT ====== -->
+<script>
+const btn = document.getElementById('toggle-furigana');
+btn.addEventListener('click', () => {
+    const article = document.getElementById('nhk-article');
+    article.classList.toggle('hide-furigana');
+
+    if(article.classList.contains('hide-furigana')){
+        btn.innerHTML = '<ruby>漢字<rt>かんじ</rt></ruby>の<ruby>読み方<rt>よみかた</rt></ruby>を<ruby>付<rt>つ</rt></ruby>ける';
+    } else {
+        btn.innerHTML = '<ruby>漢字<rt>かんじ</rt></ruby>の<ruby>読み方<rt>よみかた</rt></ruby>を<ruby>消<rt>け</rt></ruby>す';
+    }
+});
+</script>
+
+<script>
+// Button toggles the <details>
+const newsBtn = document.getElementById('toggle-news');
+const details = document.getElementById('normal-news');
+
+newsBtn.addEventListener('click', () => {
+    details.open = !details.open;
+});
+</script>
+    
+</body>
+</html>
