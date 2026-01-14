@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>NHK Easy Article</title>
+<style>
+/* ====== BASIC LAYOUT ====== */
+body {
+    font-family: "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
+    line-height: 1.8;
+    font-size: 16px;
+    color: #222;
+    margin: 20px auto;
+    max-width: 900px;
+    padding: 0 14px;
+    background-color: #fff;
+}
+
+/* ====== CONTROL BUTTONS ====== */
+#nhk-controls {
+    margin: 15px 0 25px 0;
+    text-align: center;
+}
+.nhk-btn {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 24px;
+    background-color: #9f75d1; /* lavender */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.425em; /* ~24px */
+    border: none;
+    transition: background-color 0.2s ease;
+}
+.nhk-btn:hover {
+    background-color: #805ab0; /* slightly darker lavender on hover */
+}
+
+/* ====== FURIGANA TOGGLE ====== */
+#nhk-article.hide-furigana rt {
+    display: none;
+}
+
+/* ====== DICTIONARY POPUPS (hover) ====== */
+.dicWin {
+    cursor: help;
+    text-decoration: underline dotted;
+    position: relative;
+}
+.dicWin:hover::after {
+    content: attr(data-def);
+    position: absolute;
+    top: 1.6em;
+    left: 0;
+    white-space: normal;
+    background-color: #ffffe0;
+    border: 1px solid #ccc;
+    padding: 6px 8px;
+    font-size: 0.9em;
+    color: #000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    z-index: 9999;
+    width: max-content;
+    max-width: 320px;
+}
+
+/* small helpers */
+img { max-width: 100%; height: auto; display: block; margin: 8px auto; }
+.under { text-decoration: underline; }
+
+/* ====== COLOR LEGEND ====== */
+.article-main__colors {
+    margin-top: 20px;
+}
+.about-word-color__list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 0 8px 0;
+}
+.word-color-list__item {
+    font-size: 0.95em;
+    color: #333;
+    margin-bottom: 6px;
+}
+.word-color-list__item span {
+    vertical-align: middle;
+}
+.about-word-color__caution {
+    color:#666;
+    font-size:0.95em;
+    margin-top:8px;
+}
+
+.color-legend-box {
+    background-color: #F5F5DC; /* light beige */
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 6px;
+}
+    
+/* ====== PAGE BANNER ====== */
+#page-banner {
+    background-color: #0078d7; /* blue */
+    color: #fff;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 15px 0;
+    margin: 0 0 20px 0;
+    border-radius: 4px;
+}
+
+/*==== Details line spacing ==== */
+details p {
+  margin: 0.5em 0;   /* smaller vertical margin */
+  line-height: 1.4;  /* normal line spacing */
+}
+    
+</style>
+</head>
+<body>
+
+<!-- ====== PAGE BANNER ====== -->
+<div id="page-banner">
+    NEWS WEB EASY やさしい日本語
+</div>
+
+<!-- ====== CONTROL BUTTON ====== -->
+<div id="nhk-controls">
+    <button class="nhk-btn" id="toggle-furigana">
+        <ruby>漢字<rt>かんじ</rt></ruby>の<ruby>読み方<rt>よみかた</rt></ruby>を<ruby>消<rt>け</rt></ruby>す
+    </button>
+</div>
+
+<!-- ====== ARTICLE CONTENT ====== -->
+<div id="nhk-article">
+
+<h3 style="font-size: 20px; margin-bottom: 6px;">
+    ２６８ｇで<ruby>生<rt>う</rt></ruby>まれた<ruby>男<rt>おとこ</rt></ruby>の<ruby>赤<rt>あか</rt></ruby>ちゃんが<ruby>元気<rt>げんき</rt></ruby>に<ruby>退院<rt>たいいん</rt></ruby>する
+</h3>
+
+<p style="text-align: center;">
+    <img src="https://github.com/ZoeSensei/J2Kiji/blob/main/J2Kiji12-1.jpg?raw=true" alt="手よりも小さなあかちゃんは病院でやすむ">
+</p>
+
+<p style="color: #555; margin-bottom: 20px;">[02月27日 16時55分]</p>
+
+<p>
+  <ruby>去年<rt>きょねん</rt></ruby>８<ruby>月<rt>がつ</rt></ruby>に
+  <strong style="color: #0e68b3;"><ruby>慶応大学<rt>けいおうだいがく</rt></ruby><ruby>病院<rt>びょういん</rt></ruby></strong>で
+  ２６８ｇの<ruby>男<rt>おとこ</rt></ruby>の
+  <span class="dicWin" data-def="うまれた時のこども。０歳から２歳ぐらい、とても小さい子供。"><ruby>赤<rt>あか</rt></ruby>ちゃん</span>が
+  <ruby>生<rt>う</rt></ruby>まれました。
+  <span class="dicWin" data-def="うまれた時のこども。０歳から２歳ぐらい、とても小さい子供。"><ruby>赤<rt>あか</rt></ruby>ちゃん</span>は
+  ２４<ruby>週<rt>しゅう</rt></ruby>のとき<span class="dicWin" data-def="病気な人を手伝うためにいしゃがすること。サージャリー"><ruby>手術<rt>しゅじゅつ</rt></ruby></span>で
+  <ruby>生<rt>う</rt></ruby>まれました。
+  <span class="dicWin" data-def="右手と左手"><ruby>両手<rt>りょうて</rt></ruby></span>の<ruby>中<rt>なか</rt></ruby>に<ruby>入<rt>はい</rt></ruby>るぐらい
+  <ruby>小<rt>ちい</rt></ruby>さくて、<ruby>病気<rt>びょうき</rt></ruby>にならないように<ruby>病院<rt>びょういん</rt></ruby>に６か<ruby>月<rt>げつ</rt></ruby>ぐらいいました。
+  <span class="dicWin" data-def="うまれた時のこども。０歳から２歳ぐらい、とても小さい子供。"><ruby>赤<rt>あか</rt></ruby>ちゃん</span>は３２３８ｇまで
+  <span class="dicWin" data-def="大きくなること"><ruby>育<rt>そだ</rt></ruby>って</span>、
+  ２<ruby>月<rt>がつ</rt></ruby><ruby>２０日<rt>はつか</rt></ruby>に<ruby>元気<rt>げんき</rt></ruby>に
+  <span class="dicWin" data-def="病院をでること"><ruby>退院<rt>たいいん</rt></ruby></span>しました。
+</p>
+
+<p>
+  <ruby>病院<rt>びょういん</rt></ruby>は、
+  <span class="dicWin" data-def="ザ・ワールド"><ruby>世界<rt>せかい</rt></ruby></span>でいちばん<ruby>小<rt>ちい</rt></ruby>さく<ruby>生<rt>う</rt></ruby>まれて
+  <ruby>元気<rt>げんき</rt></ruby>に
+  <span class="dicWin" data-def="病院をでること"><ruby>退院<rt>たいいん</rt></ruby></span>した<ruby>男<rt>おとこ</rt></ruby>の
+  <span class="dicWin" data-def="うまれた時のこども。０歳から２歳ぐらい、とても小さい子供。"><ruby>赤<rt>あか</rt></ruby>ちゃん</span>だと<ruby>言<rt>い</rt></ruby>っています。
+</p>
+
+<p>
+  <ruby>病院<rt>びょういん</rt></ruby>の<ruby>先生<rt>せんせい</rt></ruby>は
+  「<ruby>小<rt>ちい</rt></ruby>さく<ruby>生<rt>う</rt></ruby>まれても<ruby>元気<rt>げんき</rt></ruby>に
+  <span class="dicWin" data-def="大きくなること"><ruby>育<rt>そだ</rt></ruby>つ</span>ことを<ruby>知<rt>し</rt></ruby>ってほしいです」
+  と<ruby>話<rt>はな</rt></ruby>していました。
+</p>
+  
+<!-- Audio player -->
+<p style="text-align: center; margin: 20px 0;">
+    <audio controls>
+        <source src="https://zoesensei.github.io/J2Kiji/J2Kiji11Listen.mp3" type="audio/mpeg">
+    </audio>
+</p>
+    
+<!-- Color legend -->
+<div class="color-legend-box">
+    <ul class="about-word-color__list word-color-list">
+        <li class="word-color-list__item is-person">
+            <span style="color: #03893d;"><strong>[みどり]</strong></span>
+            ...<ruby>人<rt>ひと</rt></ruby>の<ruby>名前<rt>なまえ</rt></ruby>
+        </li>
+        <li class="word-color-list__item is-place">
+            <span style="color: #cf4a00;"><strong>[オレンジ]</strong></span>
+            …<ruby>国<rt>くに</rt></ruby>や<ruby>県<rt>けん</rt></ruby>、<ruby>町<rt>まち</rt></ruby>、<ruby>場所<rt>ばしょ</rt></ruby>などの<ruby>名前<rt>なまえ</rt></ruby>
+        </li>
+        <li class="word-color-list__item is-group">
+            <span style="color: #0e68b3;"><strong>[あお]</strong></span>
+            …<ruby>会社<rt>かいしゃ</rt></ruby>やグループなどの<ruby>名前<rt>なまえ</rt></ruby>
+        </li>
+    </ul>
+</div>
+ 
+<p class="about-word-color__caution">※下に<ruby>線<rt>せん</rt></ruby>があることばは<ruby>辞書<rt>じしょ</rt></ruby>の<ruby>説明<rt>せつめい</rt></ruby>を<ruby>見<rt>み</rt></ruby>ることができます。<ruby>押<rt>お</rt></ruby>すと、<ruby>辞書<rt>じしょ</rt></ruby>の説明を<ruby>見<rt>み</rt></ruby>ることができます。</p>
+
+<details id="normal-news">
+  <summary style="display:none;"></summary>
+  <h3 style="font-size: 20px; margin-bottom: 6px;">ドローン300機が冬の夜空彩るショー 今夜から 北海道 上士幌町</h3>
+  <p style="color: #555; margin-bottom: 20px;">2021年12月16日 17時12分</p>
+
+<p style="text-align: center;">
+    <img src="https://github.com/ZoeSensei/J2Kiji/blob/main/J2Kiji11-1.jpg?raw=true" alt="">
+</p>
+
+<p>北海道の上士幌町で、300機のドローンを使って夜空に光の絵を描くショーが、16日から始まります。</p>
+
+<p>「クリスマスドローンショー」と名付けられたこのイベントは、新型コロナウイルスの影響でさまざまな催しが中止に追い込まれる中、人々に少しでも明るい気持ちになってもらいたいと、上士幌町の道の駅で行われるものです。</p>
+
+<p>ショーでは音楽に合わせて、LEDライトが取り付けられた300機のドローンが自動飛行しながらトナカイやサンタクロースなど夜空にさまざまな絵を浮きあがらせます。</p>
+
+<p>15日夜は町民向けの前夜祭が開かれ、700人が目の前に広がる鮮やかな光のショーを堪能していました。</p>
+
+<p>子どもと訪れた女性は「感動しました。ドローンがこんなにすごいものだとは思いませんでした」と話していました。</p>
+
+<p>実行委員会によりますと、300機のドローンを使うのは国内でも最大規模だということです。</p>
+
+<p>ドローンショーは16日から悪天候の日を除き、12月25日まで上士幌町の道の駅で、毎日午後6時半と7時半の2回行われ、無料で公開されます。</p>
+  
+</details>
+
+<div style="text-align:center; margin-top: 10px;">
+  <button id="toggle-news" class="nhk-btn">
+    <ruby>普通<rt>ふつう</rt></ruby>のニュースを
+    <ruby>読<rt>よ</rt></ruby>む
+  </button>
+</div>
+    
+</div>
+
+<!-- ====== SCRIPT ====== -->
+<script>
+const btn = document.getElementById('toggle-furigana');
+btn.addEventListener('click', () => {
+    const article = document.getElementById('nhk-article');
+    article.classList.toggle('hide-furigana');
+
+    if(article.classList.contains('hide-furigana')){
+        btn.innerHTML = '<ruby>漢字<rt>かんじ</rt></ruby>の<ruby>読み方<rt>よみかた</rt></ruby>を<ruby>付<rt>つ</rt></ruby>ける';
+    } else {
+        btn.innerHTML = '<ruby>漢字<rt>かんじ</rt></ruby>の<ruby>読み方<rt>よみかた</rt></ruby>を<ruby>消<rt>け</rt></ruby>す';
+    }
+});
+</script>
+
+<script>
+// Button toggles the <details>
+const newsBtn = document.getElementById('toggle-news');
+const details = document.getElementById('normal-news');
+
+newsBtn.addEventListener('click', () => {
+    details.open = !details.open;
+});
+</script>
+    
+</body>
+</html>
