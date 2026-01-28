@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>NHK Easy Article</title>
+<style>
+/* ====== BASIC LAYOUT ====== */
+body {
+    font-family: "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
+    line-height: 1.8;
+    font-size: 16px;
+    color: #222;
+    margin: 20px auto;
+    max-width: 900px;
+    padding: 0 14px;
+    background-color: #fff;
+}
+
+/* ====== CONTROL BUTTONS ====== */
+#nhk-controls {
+    margin: 15px 0 25px 0;
+    text-align: center;
+}
+.nhk-btn {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 24px;
+    background-color: #9f75d1; /* lavender */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.425em; /* ~24px */
+    border: none;
+    transition: background-color 0.2s ease;
+}
+.nhk-btn:hover {
+    background-color: #805ab0; /* slightly darker lavender on hover */
+}
+
+/* ====== FURIGANA TOGGLE ====== */
+#nhk-article.hide-furigana rt {
+    display: none;
+}
+
+/* ====== DICTIONARY POPUPS (hover) ====== */
+.dicWin {
+    cursor: help;
+    text-decoration: underline dotted;
+    position: relative;
+}
+.dicWin:hover::after {
+    content: attr(data-def);
+    position: absolute;
+    top: 1.6em;
+    left: 0;
+    white-space: normal;
+    background-color: #ffffe0;
+    border: 1px solid #ccc;
+    padding: 6px 8px;
+    font-size: 0.9em;
+    color: #000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    z-index: 9999;
+    width: max-content;
+    max-width: 320px;
+}
+
+/* small helpers */
+img { max-width: 100%; height: auto; display: block; margin: 8px auto; }
+.under { text-decoration: underline; }
+
+/* ====== COLOR LEGEND ====== */
+.article-main__colors {
+    margin-top: 20px;
+}
+.about-word-color__list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 0 8px 0;
+}
+.word-color-list__item {
+    font-size: 0.95em;
+    color: #333;
+    margin-bottom: 6px;
+}
+.word-color-list__item span {
+    vertical-align: middle;
+}
+.about-word-color__caution {
+    color:#666;
+    font-size:0.95em;
+    margin-top:8px;
+}
+
+.color-legend-box {
+    background-color: #F5F5DC; /* light beige */
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 6px;
+}
+    
+/* ====== PAGE BANNER ====== */
+#page-banner {
+    background-color: #0078d7; /* blue */
+    color: #fff;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 15px 0;
+    margin: 0 0 20px 0;
+    border-radius: 4px;
+}
+
+/*==== Details line spacing ==== */
+details p {
+  margin: 0.5em 0;   /* smaller vertical margin */
+  line-height: 1.4;  /* normal line spacing */
+}
+    
+</style>
+</head>
+<body>
+
+<!-- ====== PAGE BANNER ====== -->
+<div id="page-banner">
+    NEWS WEB EASY やさしい日本語
+</div>
+
+<!-- ====== CONTROL BUTTON ====== -->
+<div id="nhk-controls">
+    <button class="nhk-btn" id="toggle-furigana">
+        <ruby>漢字<rt>かんじ</rt></ruby>の<ruby>読み方<rt>よみかた</rt></ruby>を<ruby>消<rt>け</rt></ruby>す
+    </button>
+</div>
+
+<!-- ====== ARTICLE CONTENT ====== -->
+<div id="nhk-article">
+
+<h3 style="font-size: 20px; margin-bottom: 6px;">
+    たくさん<ruby>雪<rt>ゆき</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>った<ruby>所<rt>ところ</rt></ruby>　<ruby>雪<rt>ゆき</rt></ruby>を<ruby>片<rt>かた</rt></ruby>づけるときの<ruby>事故<rt>じこ</rt></ruby>に<ruby>気<rt>き</rt></ruby>をつけて
+</h3>
+
+<p style="text-align: center;">
+    <img src="https://github.com/ZoeSensei/J2Kiji/blob/main/J2Kiji10-1.jpg?raw=true" alt="つもった大雪">
+</p>
+
+<p style="color: #555; margin-bottom: 20px;">[02月08日 12時00分]</p>
+
+  <p>
+      この<ruby>冬<rt>ふゆ</rt></ruby>は
+      <span class="dicWin" data-def="日本と中国の間にある海、大きな水"><ruby>日本海<rt>にほんかい</rt></ruby></span><ruby>側<rt>がわ</rt></ruby>
+      などで<ruby>雪<rt>ゆき</rt></ruby>がたくさん<ruby>降<rt>ふ</rt></ruby>っています。
+      <ruby>雪<rt>ゆき</rt></ruby>がたくさん
+      <span class="dicWin" data-def="山のようにおおくなった"><ruby>積<rt>つ</rt></ruby><span class="under">もっ</span></span>た<ruby>所<rt>ところ</rt></ruby>では、
+      <ruby>雪<rt>ゆき</rt></ruby>を
+      <span class="dicWin" data-def="きれいにする。物をただしいところにおく。"><ruby>片<rt>かた</rt></ruby>づけている</span>
+      ときの<ruby>事故<rt>じこ</rt></ruby>が<ruby>続<rt>つづ</rt></ruby>いています。
+      <strong style="color: #0e68b3;"><ruby>総務省消防庁<rt>そうむしょうしょうぼうちょう</rt></ruby></strong>によると、
+      <ruby>前<rt>まえ</rt></ruby>の<ruby>冬<rt>ふゆ</rt></ruby>には95<ruby>人<rt>にん</rt></ruby>が
+      <span class="dicWin" data-def="なくなる＝しぬ"><ruby>亡<rt>な</rt></ruby>くなりました</span>。
+  </p>
+
+  <p>
+      <ruby>雪<rt>ゆき</rt></ruby>を
+      <span class="dicWin" data-def="きれいにする。物をただしいところにおく。"><ruby>片<rt>かた</rt></ruby>づける</span>ときは
+      <ruby>危険<rt>きけん</rt></ruby>が<ruby>多<rt>おお</rt></ruby>いため、
+      <ruby>次<rt>つぎ</rt></ruby>のことに<ruby>気<rt>き</rt></ruby>をつけることが<ruby>必要<rt>ひつよう</rt></ruby>です。
+  </p>
+
+  <p>
+      <ruby>雪<rt>ゆき</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>ったあとに、
+      <span class="dicWin" data-def="おてんきはあついか、さむいか、何度であるかをあらわすこと"><ruby>気温<rt>きおん</rt></ruby></span>が
+      <ruby>上<rt>あ</rt></ruby>がったり<ruby>晴<rt>は</rt></ruby>れたりすると、
+      <span class="dicWin" data-def="家の上のぶぶん"><ruby>屋根<rt>やね</rt></ruby></span>の<ruby>雪<rt>ゆき</rt></ruby>が
+      <span class="dicWin" data-def="あたたかくなると、雪が水になること">とけて</span>、
+      <ruby>滑<rt>すべ</rt></ruby>りやすくなります。
+      <span class="dicWin" data-def="家の上のぶぶん"><ruby>屋根<rt>やね</rt></ruby></span>の<ruby>上<rt>うえ</rt></ruby>で
+      <ruby>雪<rt>ゆき</rt></ruby>を<ruby>片<rt>かた</rt></ruby>づけるときは、
+      <span class="dicWin" data-def="家の上のぶぶん"><ruby>屋根<rt>やね</rt></ruby></span>から
+      <span class="dicWin" data-def="行きたくないけど、たかいところから下に行くこと。"><ruby>落<rt>お</rt></ruby>ちない</span>ようにロープなどを
+      <span class="dicWin" data-def="使ってアッタッチすること">つける</span>ことが<ruby>大事<rt>だいじ</rt></ruby>です。
+  </p>
+
+  <p>
+      <ruby>1人<rt>ひとり</rt></ruby>で<ruby>片<rt>かた</rt></ruby>づけているときに
+      <span class="dicWin" data-def="家の上のぶぶん"><ruby>屋根<rt>やね</rt></ruby></span>から<ruby>雪<rt>ゆき</rt></ruby>がたくさん
+      <span class="dicWin" data-def="行きたくないけど、たかいところから下に行くこと。"><ruby>落<rt>お</rt></ruby>ちて</span>きて、
+      <ruby>亡<rt>な</rt></ruby>くなる<ruby>人<rt>ひと</rt></ruby>もいます。1m³の<ruby>雪<rt>ゆき</rt></ruby>は
+      <ruby>重<rt>おも</rt></ruby>さが100kg<ruby>以上<rt>いじょう</rt></ruby>で、500kgになることもあります。
+      しばらくあとで<ruby>雪<rt>ゆき</rt></ruby>の<ruby>中<rt>なか</rt></ruby>から
+      <ruby>見<rt>み</rt></ruby>つかる<ruby>人<rt>ひと</rt></ruby>も<ruby>多<rt>おお</rt></ruby>くいます。
+      <ruby>2人<rt>ふたり</rt></ruby><ruby>以上<rt>いじょう</rt></ruby>で<ruby>片<rt>かた</rt></ruby>づけることが<ruby>大事<rt>だいじ</rt></ruby>です。
+  </p>
+  
+<!-- Audio player -->
+<p style="text-align: center; margin: 20px 0;">
+    <audio controls>
+        <source src="https://zoesensei.github.io/J2Kiji/J2Kiji10Listen.mp3" type="audio/mpeg">
+    </audio>
+</p>
+    
+<!-- Color legend -->
+<div class="color-legend-box">
+    <ul class="about-word-color__list word-color-list">
+        <li class="word-color-list__item is-person">
+            <span style="color: #03893d;"><strong>[みどり]</strong></span>
+            ...<ruby>人<rt>ひと</rt></ruby>の<ruby>名前<rt>なまえ</rt></ruby>
+        </li>
+        <li class="word-color-list__item is-place">
+            <span style="color: #cf4a00;"><strong>[オレンジ]</strong></span>
+            …<ruby>国<rt>くに</rt></ruby>や<ruby>県<rt>けん</rt></ruby>、<ruby>町<rt>まち</rt></ruby>、<ruby>場所<rt>ばしょ</rt></ruby>などの<ruby>名前<rt>なまえ</rt></ruby>
+        </li>
+        <li class="word-color-list__item is-group">
+            <span style="color: #0e68b3;"><strong>[あお]</strong></span>
+            …<ruby>会社<rt>かいしゃ</rt></ruby>やグループなどの<ruby>名前<rt>なまえ</rt></ruby>
+        </li>
+    </ul>
+</div>
+ 
+<p class="about-word-color__caution">※下に<ruby>線<rt>せん</rt></ruby>があることばは<ruby>辞書<rt>じしょ</rt></ruby>の<ruby>説明<rt>せつめい</rt></ruby>を<ruby>見<rt>み</rt></ruby>ることができます。<ruby>押<rt>お</rt></ruby>すと、<ruby>辞書<rt>じしょ</rt></ruby>の説明を<ruby>見<rt>み</rt></ruby>ることができます。</p>
+
+<details id="normal-news">
+  <summary style="display:none;"></summary>
+  <h3 style="font-size: 20px; margin-bottom: 6px;">除雪作業中の事故相次ぐ 作業前に知っておきたいポイント</h3>
+  <p style="color: #555; margin-bottom: 20px;">2022年2月5日 18時41分</p>
+
+<p style="text-align: center;">
+    <img src="https://github.com/ZoeSensei/J2Kiji/blob/main/J2Kiji14-1.jpg?raw=true" alt="">
+</p>
+
+<p>@</p>
+
+</details>
+
+<div style="text-align:center; margin-top: 10px;">
+  <button id="toggle-news" class="nhk-btn">
+    <ruby>普通<rt>ふつう</rt></ruby>のニュースを
+    <ruby>読<rt>よ</rt></ruby>む
+  </button>
+</div>
+    
+</div>
+
+<!-- ====== SCRIPT ====== -->
+<script>
+const btn = document.getElementById('toggle-furigana');
+btn.addEventListener('click', () => {
+    const article = document.getElementById('nhk-article');
+    article.classList.toggle('hide-furigana');
+
+    if(article.classList.contains('hide-furigana')){
+        btn.innerHTML = '<ruby>漢字<rt>かんじ</rt></ruby>の<ruby>読み方<rt>よみかた</rt></ruby>を<ruby>付<rt>つ</rt></ruby>ける';
+    } else {
+        btn.innerHTML = '<ruby>漢字<rt>かんじ</rt></ruby>の<ruby>読み方<rt>よみかた</rt></ruby>を<ruby>消<rt>け</rt></ruby>す';
+    }
+});
+</script>
+
+<script>
+// Button toggles the <details>
+const newsBtn = document.getElementById('toggle-news');
+const details = document.getElementById('normal-news');
+
+newsBtn.addEventListener('click', () => {
+    details.open = !details.open;
+});
+</script>
+    
+</body>
+</html>
